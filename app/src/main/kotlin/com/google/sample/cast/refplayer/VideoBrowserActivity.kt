@@ -17,15 +17,11 @@ package com.google.sample.cast.refplayer
 
 import com.google.android.gms.cast.framework.CastButtonFactory
 import com.google.android.gms.cast.framework.CastContext
-import com.google.android.gms.cast.framework.CastState
-import com.google.android.gms.cast.framework.CastStateListener
-import com.google.android.gms.cast.framework.IntroductoryOverlay
 import com.google.sample.cast.refplayer.settings.CastPreference
 
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.Menu
@@ -37,33 +33,12 @@ class VideoBrowserActivity : AppCompatActivity() {
     private var mToolbar: androidx.appcompat.widget.Toolbar? = null
     private var mCastContext: CastContext? = null
     private var mediaRouteMenuItem: MenuItem? = null
-    private var mIntroductoryOverlay: IntroductoryOverlay? = null
-    private var mCastStateListener: CastStateListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.video_browser)
         setupActionBar()
-        mCastStateListener = object : CastStateListener {
-            override fun onCastStateChanged(newState: Int) {
-                if (newState != CastState.NO_DEVICES_AVAILABLE) {
-                    showIntroductoryOverlay()
-                }
-            }
-        }
         mCastContext = CastContext.getSharedInstance(this)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        mCastContext?.addCastStateListener(mCastStateListener!!)
-
-    }
-
-    override fun onPause() {
-        super.onPause()
-        mCastContext?.removeCastStateListener(mCastStateListener!!)
-
     }
 
     private fun setupActionBar() {
@@ -94,26 +69,6 @@ class VideoBrowserActivity : AppCompatActivity() {
     override fun onDestroy() {
         Log.d(TAG, "onDestroy is called")
         super.onDestroy()
-    }
-
-    private fun showIntroductoryOverlay() {
-        mIntroductoryOverlay?.remove()
-        if (mediaRouteMenuItem?.isVisible == true) {
-            Looper.myLooper().run {
-                mIntroductoryOverlay = com.google.android.gms.cast.framework.IntroductoryOverlay.Builder(
-                        this@VideoBrowserActivity, mediaRouteMenuItem!!)
-                        .setTitleText("Introducing Cast")
-                        .setSingleTime()
-                        .setOnOverlayDismissedListener(
-                                object : IntroductoryOverlay.OnOverlayDismissedListener {
-                                    override fun onOverlayDismissed() {
-                                        mIntroductoryOverlay = null
-                                    }
-                                })
-                        .build()
-                mIntroductoryOverlay!!.show()
-            }
-        }
     }
 
     companion object {
