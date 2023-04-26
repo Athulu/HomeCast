@@ -496,11 +496,11 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="about_app">About Cast Videos</string>
+    <string name="about_app">About HomeCast</string>
     <string name="action_settings">Settings</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="app_id">CC1AD845</string>
-    <string name="app_name">Cast Videos</string>
+    <string name="app_name">HomeCast</string>
     <string name="cast_ad_label">Ad</string>
     <string name="cast_app_name">GoogleCastPlayer</string>
     <string name="cast_casting_to_device">Casting to %1$s</string>
@@ -639,7 +639,7 @@
     <string name="touch_to_cast">Touch to cast videos to your TV</string>
     <string name="transition_image">transition-image</string>
     <string name="unmute">Unmute</string>
-    <string name="version">CastVideos: %1$s</string>
+    <string name="version">HomeCast: %1$s</string>
     <string name="video_error_media_load_timeout">Media loading timed out</string>
     <string name="video_error_server_unaccessible">Media server was not reachable</string>
     <string name="video_error_unknown_error">Failed to load video</string>

@@ -1322,6 +1322,7 @@ drawable shadow6
 drawable shadow7
 drawable skip_next_button
 drawable skip_previous_button
+drawable smiec
 drawable spinner_ab_default_castvideo
 drawable spinner_ab_default_democast
 drawable spinner_ab_disabled_castvideo
