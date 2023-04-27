@@ -635,8 +635,8 @@ class LocalPlayerActivity : AppCompatActivity() {
         val movieMetadata = MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE)
         mSelectedMedia?.studio?.let { movieMetadata.putString(MediaMetadata.KEY_SUBTITLE, it) }
         mSelectedMedia?.title?.let { movieMetadata.putString(MediaMetadata.KEY_TITLE, it) }
-        movieMetadata.addImage(WebImage(Uri.parse(mSelectedMedia!!.getImage(0))))
         movieMetadata.addImage(WebImage(Uri.parse(mSelectedMedia!!.getImage(1))))
+//        movieMetadata.addImage(WebImage(Uri.parse(mSelectedMedia!!.getImage(0))))
         return mSelectedMedia!!.url?.let {
             MediaInfo.Builder(it)
                 .setStreamType(MediaInfo.STREAM_TYPE_BUFFERED)

@@ -88,7 +88,6 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
 
     companion object {
         private const val TAG = "VideoBrowserFragment"
-//        private const val CATALOG_URL = "https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/f.json"
         private const val CATALOG_URL = "http://192.168.1.107:8080/db.json"
     }
 }
