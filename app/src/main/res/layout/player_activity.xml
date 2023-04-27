@@ -125,6 +125,7 @@
 
     <TextView
             android:id="@+id/textView1"
+            android:textColor="@color/netflix_font_color"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -137,6 +138,7 @@
 
     <TextView
             android:id="@+id/textView3"
+            android:textColor="@color/netflix_font_color"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView1"
@@ -148,6 +150,7 @@
 
     <TextView
             android:id="@+id/textView2"
+            android:textColor="@color/netflix_font_color"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

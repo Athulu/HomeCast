@@ -531,6 +531,8 @@ color mr_dynamic_dialog_icon_dark
 color mr_dynamic_dialog_icon_light
 color mr_dynamic_dialog_route_text_color_dark
 color mr_dynamic_dialog_route_text_color_light
+color netflix_background_color
+color netflix_font_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -975,6 +977,7 @@ drawable ic_audiotrack_light
 drawable ic_av_next
 drawable ic_av_pause
 drawable ic_av_pause_dark
+drawable ic_av_pause_ligh2t
 drawable ic_av_pause_light
 drawable ic_av_pause_over_video
 drawable ic_av_pause_over_video_large
@@ -2108,7 +2111,6 @@ style CastExpandedController
 style CastIntroOverlay
 style CastMiniController
 style CustomCastExpandedController
-style CustomCastIntroOverlay
 style CustomCastMiniController
 style CustomCastTheme
 style CustomMediaRouteButtonStyle
@@ -2204,8 +2206,6 @@ style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
 style TextAppearance_Compat_Notification_Title_Media
-style TextAppearance_CustomCastIntroOverlay_Button
-style TextAppearance_CustomCastIntroOverlay_Title
 style TextAppearance_MediaRouter_Dynamic_Body
 style TextAppearance_MediaRouter_Dynamic_Body_Light
 style TextAppearance_MediaRouter_Dynamic_Header
