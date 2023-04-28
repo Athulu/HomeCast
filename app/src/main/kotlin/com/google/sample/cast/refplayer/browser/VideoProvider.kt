@@ -31,7 +31,7 @@ class VideoProvider {
             val urlConnection = url.openConnection()
             instream = urlConnection.getInputStream()
             val reader = BufferedReader(InputStreamReader(
-                    urlConnection.getInputStream(), "iso-8859-1"), 1024)
+                    urlConnection.getInputStream(), "UTF-8"), 1024)
             val sb = StringBuilder()
             var line: String?
             while (reader.readLine().also { line = it } != null) {
