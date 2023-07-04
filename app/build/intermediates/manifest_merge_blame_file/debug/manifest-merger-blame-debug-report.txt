@@ -21,13 +21,13 @@
 21
 22    <uses-sdk
 23        android:minSdkVersion="18"
-23-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml
+23-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml
 24        android:targetSdkVersion="32" />
-24-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml
+24-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml
 25
 26    <uses-permission android:name="android.permission.INTERNET" />
-26-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:19:5-67
-26-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:19:22-64
+26-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:19:5-67
+26-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:19:22-64
 27
 28    <!-- This permission is required to start foreground services in Android P. -->
 29    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
@@ -49,113 +49,113 @@
 37-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Nikodem\.gradle\caches\transforms-3\ca0cccf16781ea0e4122c1973dc88c38\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
 38
 39    <application
-39-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:21:5-75:19
+39-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:21:5-75:19
 40        android:allowBackup="true"
-40-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:22:9-35
+40-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:22:9-35
 41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 41-->[androidx.core:core:1.8.0] C:\Users\Nikodem\.gradle\caches\transforms-3\5f4782bafd7932eb0f722e4e69b0daa8\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 42        android:debuggable="true"
 43        android:icon="@drawable/ic_launcher"
-43-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:23:9-45
+43-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:23:9-45
 44        android:label="@string/app_name"
-44-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:24:9-41
+44-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:24:9-41
 45        android:testOnly="true"
 46        android:theme="@style/Theme.CastVideosTheme"
-46-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:25:9-53
+46-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:25:9-53
 47        android:usesCleartextTraffic="true" >
-47-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:26:9-44
+47-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:26:9-44
 48        <activity
-48-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:28:9-38:20
+48-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:28:9-38:20
 49            android:name="com.google.sample.cast.refplayer.VideoBrowserActivity"
-49-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:29:13-81
+49-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:29:13-81
 50            android:exported="true"
-50-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:32:13-36
+50-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:32:13-36
 51            android:label="@string/app_name"
-51-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:30:13-45
+51-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:30:13-45
 52            android:screenOrientation="portrait" >
-52-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:31:13-49
+52-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:31:13-49
 53            <intent-filter>
-53-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:33:13-37:29
+53-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:33:13-37:29
 54                <action android:name="android.intent.action.MAIN" />
-54-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:34:17-69
-54-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:34:25-66
+54-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:34:17-69
+54-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:34:25-66
 55
 56                <category android:name="android.intent.category.LAUNCHER" />
-56-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:36:17-77
-56-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:36:27-74
+56-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:36:17-77
+56-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:36:27-74
 57            </intent-filter>
 58        </activity>
 59        <activity
-59-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:39:9-48:20
+59-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:39:9-48:20
 60            android:name="com.google.sample.cast.refplayer.mediaplayer.LocalPlayerActivity"
-60-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:40:13-92
+60-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:40:13-92
 61            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout|uiMode"
-61-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:41:13-103
+61-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:41:13-103
 62            android:exported="true"
-62-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:44:13-36
+62-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:44:13-36
 63            android:label="@string/app_name"
-63-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:42:13-45
+63-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:42:13-45
 64            android:launchMode="singleTask" >
-64-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:43:13-44
+64-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:43:13-44
 65            <intent-filter>
-65-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:45:13-47:29
+65-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:45:13-47:29
 66                <action android:name="android.intent.action.MAIN" />
-66-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:34:17-69
-66-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:34:25-66
+66-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:34:17-69
+66-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:34:25-66
 67            </intent-filter>
 68        </activity>
 69        <activity
-69-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:49:9-57:20
+69-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:49:9-57:20
 70            android:name="com.google.sample.cast.refplayer.settings.CastPreference"
-70-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:50:13-84
+70-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:50:13-84
 71            android:exported="true"
-71-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:53:13-36
+71-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:53:13-36
 72            android:label="@string/action_settings"
-72-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:52:13-52
+72-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:52:13-52
 73            android:theme="@style/Theme.AppCompat" >
-73-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:51:13-51
+73-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:51:13-51
 74            <intent-filter>
-74-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:45:13-47:29
+74-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:45:13-47:29
 75                <action android:name="android.intent.action.MAIN" />
-75-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:34:17-69
-75-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:34:25-66
+75-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:34:17-69
+75-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:34:25-66
 76            </intent-filter>
 77        </activity>
 78        <activity
-78-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:58:9-71:20
+78-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:58:9-71:20
 79            android:name="com.google.sample.cast.refplayer.expandedcontrols.ExpandedControlsActivity"
-79-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:59:17-106
+79-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:59:17-106
 80            android:exported="true"
-80-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:64:17-40
+80-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:64:17-40
 81            android:label="@string/app_name"
-81-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:60:17-49
+81-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:60:17-49
 82            android:launchMode="singleInstance"
-82-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:61:17-52
+82-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:61:17-52
 83            android:screenOrientation="portrait"
-83-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:63:17-53
+83-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:63:17-53
 84            android:theme="@style/Theme.CastVideosDark" >
-84-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:62:17-60
+84-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:62:17-60
 85            <intent-filter>
-85-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:45:13-47:29
+85-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:45:13-47:29
 86                <action android:name="android.intent.action.MAIN" />
-86-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:34:17-69
-86-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:34:25-66
+86-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:34:17-69
+86-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:34:25-66
 87            </intent-filter>
 88
 89            <meta-data
-89-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:68:13-70:92
+89-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:68:13-70:92
 90                android:name="android.support.PARENT_ACTIVITY"
-90-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:69:21-67
+90-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:69:21-67
 91                android:value="com.google.sample.cast.refplayer.VideoBrowserActivity" />
-91-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:70:21-90
+91-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:70:21-90
 92        </activity>
 93
 94        <meta-data
-94-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:72:9-74:88
+94-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:72:9-74:88
 95            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
-95-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:73:17-97
+95-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:73:17-97
 96            android:value="com.google.sample.cast.refplayer.CastOptionsProvider" />
-96-->C:\Users\Nikodem\Desktop\codelabs-cast-videos-android\app-done\app\src\main\AndroidManifest.xml:74:17-85
+96-->C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:74:17-85
 97
 98        <receiver
 98-->[com.google.android.gms:play-services-cast-framework:21.1.0] C:\Users\Nikodem\.gradle\caches\transforms-3\5e67f770228585ac52f6b04cc41b2754\transformed\jetified-play-services-cast-framework-21.1.0\AndroidManifest.xml:13:9-15:40

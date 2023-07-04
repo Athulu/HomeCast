@@ -21,30 +21,13 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Nikodem\\Desktop\\codelabs-cast-videos-android\\app-done\\app\\src\\main\\res\\values-sw600dp\\integers.xml",
-                    "from": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "661",
-                        "endColumns": "44",
-                        "endOffsets": "701"
-                    },
-                    "to": {
-                        "startLines": "15",
-                        "startColumns": "4",
-                        "startOffsets": "909",
-                        "endColumns": "44",
-                        "endOffsets": "949"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Nikodem\\Desktop\\codelabs-cast-videos-android\\app-done\\app\\src\\main\\res\\values-sw600dp\\dimens.xml",
+                    "source": "C:\\Users\\Nikodem\\IdeaProjects\\HomeCast\\app\\src\\main\\res\\values-sw600dp\\dimens.xml",
                     "from": {
                         "startLines": "24,23",
                         "startColumns": "4,4",
-                        "startOffsets": "886,831",
+                        "startOffsets": "910,854",
                         "endColumns": "65,54",
-                        "endOffsets": "947,881"
+                        "endOffsets": "971,904"
                     },
                     "to": {
                         "startLines": "11,14",
@@ -52,6 +35,23 @@
                         "startOffsets": "650,854",
                         "endColumns": "65,54",
                         "endOffsets": "711,904"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Nikodem\\IdeaProjects\\HomeCast\\app\\src\\main\\res\\values-sw600dp\\integers.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "679",
+                        "endColumns": "44",
+                        "endOffsets": "719"
+                    },
+                    "to": {
+                        "startLines": "15",
+                        "startColumns": "4",
+                        "startOffsets": "909",
+                        "endColumns": "44",
+                        "endOffsets": "949"
                     }
                 },
                 {

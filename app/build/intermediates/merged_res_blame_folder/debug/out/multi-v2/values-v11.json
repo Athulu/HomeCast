@@ -1,41 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-mergeDebugResources-26:\\values-v11\\values-v11.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Nikodem\\Desktop\\codelabs-cast-videos-android\\app-done\\app\\src\\main\\res\\values-v11\\styles.xml",
-                    "from": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "661",
-                        "endLines": "25",
-                        "endColumns": "12",
-                        "endOffsets": "1090"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "9",
-                        "endColumns": "12",
-                        "endOffsets": "416"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "com.google.sample.cast.refplayer.app-mergeDebugResources-26:/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Nikodem\\Desktop\\codelabs-cast-videos-android\\app-done\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "source": "C:\\Users\\Nikodem\\IdeaProjects\\HomeCast\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "from": {
                         "startLines": "18",
                         "startColumns": "4",
-                        "startOffsets": "661",
+                        "startOffsets": "679",
                         "endLines": "24",
                         "endColumns": "12",
-                        "endOffsets": "1018"
+                        "endOffsets": "1042"
                     },
                     "to": {
                         "startLines": "2",
