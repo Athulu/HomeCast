@@ -24,6 +24,7 @@ import com.google.sample.cast.refplayer.R
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.core.app.ActivityOptionsCompat
 import android.content.Intent
+import android.content.res.Configuration
 import android.view.View
 import com.google.sample.cast.refplayer.mediaplayer.LocalPlayerActivity
 import androidx.core.app.ActivityCompat
@@ -41,6 +42,8 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
     private var mAdapter: VideoListAdapter? = null
     private var mEmptyView: View? = null
     private var mLoadingView: View? = null
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.video_browser_fragment, container, false)
@@ -58,6 +61,7 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
         mRecyclerView!!.adapter = mAdapter
         LoaderManager.getInstance(this).initLoader(0, null, this)
     }
+
 
     override fun itemClicked(v: View?, item: MediaItem?, position: Int) {
         val transitionName = getString(R.string.transition_image)

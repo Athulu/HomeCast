@@ -46,6 +46,7 @@ import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.*
 import android.widget.*
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import com.android.volley.toolbox.ImageLoader
@@ -87,6 +88,11 @@ class LocalPlayerActivity : AppCompatActivity() {
     private var mSessionManagerListener: SessionManagerListener<CastSession>? = null
     private var mediaRouteMenuItem: MenuItem? = null
 
+    private var mToolbar: androidx.appcompat.widget.Toolbar? = null
+    private var mActionBar: ActionBar? = null
+    private var mToolbarVisible = true
+
+
     /**
      * indicates whether we are doing a local or a remote playback
      */
@@ -106,6 +112,21 @@ class LocalPlayerActivity : AppCompatActivity() {
         setContentView(R.layout.player_activity)
         loadViews()
         setupControlsCallbacks()
+
+
+        mCastContext = CastContext.getSharedInstance(this)
+        mCastSession = mCastContext!!.sessionManager.currentCastSession
+        setupCastListener()
+
+        // Sprawdź aktualną orientację ekranu
+        val currentOrientation = resources.configuration.orientation
+
+        // Jeśli orientacja jest horyzontalna, ukryj toolbar
+        if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+            supportActionBar?.hide()
+        } else {
+            supportActionBar?.show()
+        }
 
         mCastContext = CastContext.getSharedInstance(this)
         mCastSession = mCastContext!!.sessionManager.currentCastSession
@@ -146,6 +167,7 @@ class LocalPlayerActivity : AppCompatActivity() {
             updateMetadata(true)
         }
     }
+
 
     private fun setupCastListener() {
         mSessionManagerListener = object : SessionManagerListener<CastSession> {
@@ -276,6 +298,8 @@ class LocalPlayerActivity : AppCompatActivity() {
         updatePlayButton(mPlaybackState)
     }
 
+
+
     private fun loadRemoteMedia(position: Int, autoPlay: Boolean) {
         if (mCastSession == null) {
             return
@@ -331,25 +355,31 @@ class LocalPlayerActivity : AppCompatActivity() {
         }
     }
 
+//    private fun startControllersTimer() {
+//        if (mControllersTimer != null) {
+//            mControllersTimer!!.cancel()
+//        }
+//        if (mLocation == PlaybackLocation.REMOTE) {
+//            return
+//        }
+//        mControllersTimer = Timer()
+//        mControllersTimer!!.schedule(HideControllersTask(), 5000)
+//    }
+
     private fun startControllersTimer() {
-        if (mControllersTimer != null) {
-            mControllersTimer!!.cancel()
+        stopControllersTimer()
+        if (mControllersVisible && mLocation != PlaybackLocation.REMOTE) {
+            mControllersTimer = Timer()
+            mControllersTimer!!.schedule(HideControllersTask(), 5000)
         }
-        if (mLocation == PlaybackLocation.REMOTE) {
-            return
-        }
-        mControllersTimer = Timer()
-        mControllersTimer!!.schedule(HideControllersTask(), 5000)
     }
 
     // should be called from the main thread
     private fun updateControllersVisibility(show: Boolean) {
         if (show) {
-            supportActionBar!!.show()
             mControllers!!.visibility = View.VISIBLE
         } else {
             if (!isOrientationPortrait(this)) {
-                supportActionBar!!.hide()
             }
             mControllers!!.visibility = View.INVISIBLE
         }
@@ -416,10 +446,11 @@ class LocalPlayerActivity : AppCompatActivity() {
 
     private inner class UpdateSeekbarTask : TimerTask() {
         override fun run() {
-            looper.thread.join().apply{
-                if (mLocation == PlaybackLocation.LOCAL) {
-                    val currentPos = mVideoView!!.currentPosition
-                    updateSeekbar(currentPos, mDuration)
+            if (mLocation == PlaybackLocation.LOCAL) {
+                val currentPosition = mVideoView!!.currentPosition
+                val duration = mVideoView!!.duration
+                runOnUiThread {
+                    updateSeekbar(currentPosition, duration)
                 }
             }
         }
@@ -533,10 +564,13 @@ class LocalPlayerActivity : AppCompatActivity() {
         }
     }
 
+
+
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         supportActionBar!!.show()
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            supportActionBar?.hide()
             window.clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN)
             window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN)
@@ -546,6 +580,7 @@ class LocalPlayerActivity : AppCompatActivity() {
             updateMetadata(false)
             mContainer!!.setBackgroundColor(resources.getColor(R.color.black))
         } else {
+            supportActionBar?.show()
             window.setFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN)
             window.clearFlags(
@@ -605,10 +640,10 @@ class LocalPlayerActivity : AppCompatActivity() {
     }
 
     private fun setupActionBar() {
-        val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
-        toolbar.title = mSelectedMedia!!.title
-        setSupportActionBar(toolbar)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        mToolbar = findViewById<View>(R.id.toolbar) as androidx.appcompat.widget.Toolbar?
+        mActionBar = supportActionBar
+        mActionBar?.setDisplayHomeAsUpEnabled(true)
+        setSupportActionBar(mToolbar)
     }
 
     private fun loadViews() {

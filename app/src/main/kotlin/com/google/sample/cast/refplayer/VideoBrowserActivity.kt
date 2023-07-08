@@ -20,6 +20,7 @@ import com.google.android.gms.cast.framework.CastContext
 import com.google.sample.cast.refplayer.settings.CastPreference
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -27,24 +28,51 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.ActionBar
 
 class VideoBrowserActivity : AppCompatActivity() {
     private val mIsHoneyCombOrAbove = Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB
     private var mToolbar: androidx.appcompat.widget.Toolbar? = null
     private var mCastContext: CastContext? = null
     private var mediaRouteMenuItem: MenuItem? = null
+    private var mActionBar: ActionBar? = null
+    private var mToolbarVisible = true
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.video_browser)
         setupActionBar()
         mCastContext = CastContext.getSharedInstance(this)
+        if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            toggleToolbarVisibility()
+        }
     }
 
     private fun setupActionBar() {
         mToolbar = findViewById<View>(R.id.toolbar) as androidx.appcompat.widget.Toolbar?
+        mActionBar = supportActionBar
         mToolbar?.setTitle(R.string.app_name)
         setSupportActionBar(mToolbar)
+    }
+
+    private fun toggleToolbarVisibility() {
+        if (mToolbarVisible) {
+            mActionBar?.hide()
+            mToolbarVisible = false
+        } else {
+            mActionBar?.show()
+            mToolbarVisible = true
+        }
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            toggleToolbarVisibility()
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            toggleToolbarVisibility()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
