@@ -47,7 +47,6 @@ import android.util.Log
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.ActionBar
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import com.android.volley.toolbox.ImageLoader
 import com.google.android.gms.cast.MediaInfo
@@ -608,7 +607,7 @@ class LocalPlayerActivity : AppCompatActivity() {
         } else {
             mDescriptionView!!.text = mSelectedMedia!!.subTitle
             mTitleView!!.text = mSelectedMedia!!.title
-            mAuthorView!!.text = mSelectedMedia!!.studio
+            mAuthorView!!.text = mSelectedMedia!!.episode
             mDescriptionView!!.visibility = View.VISIBLE
             mTitleView!!.visibility = View.VISIBLE
             mAuthorView!!.visibility = View.VISIBLE
@@ -668,7 +667,7 @@ class LocalPlayerActivity : AppCompatActivity() {
 
     private fun buildMediaInfo(): MediaInfo? {
         val movieMetadata = MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE)
-        mSelectedMedia?.studio?.let { movieMetadata.putString(MediaMetadata.KEY_SUBTITLE, it) }
+        mSelectedMedia?.episode?.let { movieMetadata.putString(MediaMetadata.KEY_SUBTITLE, it) }
         mSelectedMedia?.title?.let { movieMetadata.putString(MediaMetadata.KEY_TITLE, it) }
         movieMetadata.addImage(WebImage(Uri.parse(mSelectedMedia!!.getImage(1))))
 //        movieMetadata.addImage(WebImage(Uri.parse(mSelectedMedia!!.getImage(0))))

@@ -43,7 +43,7 @@ class VideoListAdapter(private val mClickListener: ItemClickListener, context: C
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val item = videos!![position]
         viewHolder.setTitle(item.title)
-        viewHolder.setDescription(item.studio)
+        viewHolder.setDescription(item.episode)
         viewHolder.setImage(item.getImage(0), mAppContext)
         viewHolder.mImgView.setOnClickListener { v -> mClickListener.itemClicked(v, item, position) }
         viewHolder.mTextContainer.setOnClickListener { v -> mClickListener.itemClicked(v, item, position) }
