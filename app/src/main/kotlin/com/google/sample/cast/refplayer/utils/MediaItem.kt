@@ -24,7 +24,7 @@ import java.util.ArrayList
 class MediaItem {
     var title: String? = null
     var subTitle: String? = null
-    var studio: String? = null
+    var episode: String? = null
     var url: String? = null
     var contentType: String? = null
     var duration = 0
@@ -54,7 +54,7 @@ class MediaItem {
         wrapper.putString(KEY_TITLE, title)
         wrapper.putString(KEY_SUBTITLE, subTitle)
         wrapper.putString(KEY_URL, url)
-        wrapper.putString(KEY_STUDIO, studio)
+        wrapper.putString(KEY_EPISODE, episode)
         wrapper.putStringArrayList(KEY_IMAGES, images)
         wrapper.putString(KEY_CONTENT_TYPE, "video/mp4")
         return wrapper
@@ -63,7 +63,7 @@ class MediaItem {
     companion object {
         const val KEY_TITLE = "title"
         const val KEY_SUBTITLE = "subtitle"
-        const val KEY_STUDIO = "studio"
+        const val KEY_EPISODE = "episode"
         const val KEY_URL = "movie-urls"
         const val KEY_IMAGES = "images"
         const val KEY_CONTENT_TYPE = "content-type"
@@ -76,7 +76,7 @@ class MediaItem {
             media.url = wrapper.getString(KEY_URL)
             media.title = wrapper.getString(KEY_TITLE)
             media.subTitle = wrapper.getString(KEY_SUBTITLE)
-            media.studio = wrapper.getString(KEY_STUDIO)
+            media.episode = wrapper.getString(KEY_EPISODE)
             media.images.addAll(wrapper.getStringArrayList(KEY_IMAGES)!!)
             media.contentType = wrapper.getString(KEY_CONTENT_TYPE)
             return media
