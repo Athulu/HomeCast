@@ -66,8 +66,8 @@ class VideoProvider {
         private const val TAG_SOURCES = "sources"
         private const val TAG_SUBTITLE = "subtitle"
         private const val TAG_DURATION = "duration"
-        private const val TAG_THUMB = "image-480x270"
-        private const val TAG_IMG_780_1200 = "image-780x1200"
+        private const val TAG_THUMB = "image480x270"
+        private const val TAG_IMG_780_1200 = "image780x1200"
         private const val TAG_TITLE = "title"
         const val KEY_DESCRIPTION = "description"
         private const val TARGET_FORMAT = TAG_MP4

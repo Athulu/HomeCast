@@ -92,6 +92,6 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
 
     companion object {
         private const val TAG = "VideoBrowserFragment"
-        private const val CATALOG_URL = "http://192.168.1.109:8080/db.json"
+        private const val CATALOG_URL = "http://192.168.1.109:8080/videos"
     }
 }
