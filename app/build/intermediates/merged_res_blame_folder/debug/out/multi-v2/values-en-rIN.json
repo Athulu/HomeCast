@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.google.sample.cast.refplayer.app-mergeDebugResources-26:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.google.sample.cast.refplayer.app-mergeDebugResources-27:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Nikodem\\.gradle\\caches\\transforms-3\\68d3d2ebd5b114e37a866d64072a4e08\\transformed\\appcompat-1.5.0\\res\\values-en-rIN\\values-en-rIN.xml",

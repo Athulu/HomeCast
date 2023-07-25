@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.google.sample.cast.refplayer.app-mergeDebugResources-26:/values-v11/values-v11.xml",
+            "outputFile": "com.google.sample.cast.refplayer.app-mergeDebugResources-27:/values-v11/values-v11.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Nikodem\\IdeaProjects\\HomeCast\\app\\src\\main\\res\\values-v11\\styles.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.google.sample.cast.refplayer.app-mergeDebugResources-26:/values-ur/values-ur.xml",
+            "outputFile": "com.google.sample.cast.refplayer.app-mergeDebugResources-27:/values-ur/values-ur.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Nikodem\\.gradle\\caches\\transforms-3\\5f4782bafd7932eb0f722e4e69b0daa8\\transformed\\core-1.8.0\\res\\values-ur\\values-ur.xml",

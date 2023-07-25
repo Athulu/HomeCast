@@ -15,43 +15,33 @@
  */
 package com.google.sample.cast.refplayer.browser
 
+import android.os.AsyncTask
 import android.util.Log
 import com.google.sample.cast.refplayer.utils.MediaItem
 import org.json.JSONException
 import org.json.JSONObject
-import java.io.*
+import java.net.HttpURLConnection
 import java.net.URL
 
 
-class VideoProvider {
-    protected fun parseUrl(urlString: String?): JSONObject? {
-        var instream: InputStream? = null
-        return try {
-            val url = URL(urlString)
-            val urlConnection = url.openConnection()
-            instream = urlConnection.getInputStream()
-            val reader = BufferedReader(InputStreamReader(
-                    urlConnection.getInputStream(), "UTF-8"), 1024)
-            val sb = StringBuilder()
-            var line: String?
-            while (reader.readLine().also { line = it } != null) {
-                sb.append(line)
-            }
-
-            val json = sb.toString()
-            JSONObject(json)
-        } catch (e: Exception) {
-            Log.d(TAG, "Failed to parse the json for media list", e)
-            null
-        } finally {
-            if (null != instream) {
-                try {
-                    instream.close()
-                } catch (e: IOException) {
-                    Log.w(TAG, e)
-                }
-            }
+class VideoProvider : AsyncTask<String?, Void?, String>(){
+    override fun doInBackground(vararg params: String?): String {
+        var text = ""
+        try {
+            val connection = URL(params.get(0)).openConnection() as HttpURLConnection
+            return connection.inputStream.bufferedReader().readText()
+        } catch (e: Exception){
+            Log.d(TAG, "trochę lipa z parsowaniem jsona w mediaList", e)
+            e.printStackTrace()
         }
+        return text
+    }
+    override fun onPostExecute(message: String) {
+        Log.d(TAG, "zajebiście")
+    }
+    protected fun parseUrl(urlString: String?): JSONObject? {
+        val result = execute(urlString).get()
+        return JSONObject(result)
     }
 
     companion object {
@@ -76,9 +66,6 @@ class VideoProvider {
         @JvmStatic
         @Throws(JSONException::class)
         fun buildMedia(url: String?): List<MediaItem>? {
-            if (null != mediaList) {
-                return mediaList
-            }
             val urlPrefixMap: MutableMap<String, String> = HashMap()
             mediaList = ArrayList()
             val jsonObj = VideoProvider().parseUrl(url!!)

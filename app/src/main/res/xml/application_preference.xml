@@ -26,4 +26,13 @@
             android:title="@string/version" />
     </PreferenceCategory>
 
+    <EditTextPreference
+            android:key="custom_catalog_url"
+            android:title="Custom Catalog URL"
+            android:summary="Enter your custom catalog URL"
+            android:dialogTitle="Enter Custom Catalog URL"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+
 </PreferenceScreen>
