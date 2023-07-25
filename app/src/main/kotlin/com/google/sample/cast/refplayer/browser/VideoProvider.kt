@@ -1,18 +1,3 @@
-/*
- * Copyright (C) 2022 Google LLC. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.google.sample.cast.refplayer.browser
 
 import android.os.AsyncTask
@@ -26,18 +11,17 @@ import java.net.URL
 
 class VideoProvider : AsyncTask<String?, Void?, String>(){
     override fun doInBackground(vararg params: String?): String {
-        var text = ""
         try {
-            val connection = URL(params.get(0)).openConnection() as HttpURLConnection
+            var connection = URL(params.get(0)).openConnection() as HttpURLConnection
             return connection.inputStream.bufferedReader().readText()
         } catch (e: Exception){
-            Log.d(TAG, "trochę lipa z parsowaniem jsona w mediaList", e)
+            Log.d(TAG, "troche lipa z pobraniem jsona", e)
             e.printStackTrace()
         }
-        return text
+        return "{}"
     }
     override fun onPostExecute(message: String) {
-        Log.d(TAG, "zajebiście")
+        Log.d(TAG, "pobrano jsona")
     }
     protected fun parseUrl(urlString: String?): JSONObject? {
         val result = execute(urlString).get()
@@ -68,8 +52,9 @@ class VideoProvider : AsyncTask<String?, Void?, String>(){
         fun buildMedia(url: String?): List<MediaItem>? {
             val urlPrefixMap: MutableMap<String, String> = HashMap()
             mediaList = ArrayList()
-            val jsonObj = VideoProvider().parseUrl(url!!)
+            var jsonObj = VideoProvider().parseUrl(url!!)
             print(jsonObj.toString())
+            if(jsonObj.toString().equals("{}")) jsonObj = null
 
             if (null != jsonObj) {
                 urlPrefixMap[TAG_MP4] = jsonObj.getString(TAG_MP4)

@@ -74,7 +74,7 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
         val swipeRefreshLayout = view.findViewById<SwipeRefreshLayout>(R.id.swipeRefreshLayout)
         swipeRefreshLayout.setOnRefreshListener {
             refreshData()
-            swipeRefreshLayout.isRefreshing = false // Zakończenie animacji odświeżania
+            swipeRefreshLayout.isRefreshing = false
         }
     }
 
@@ -108,27 +108,26 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
 
     companion object {
         private const val TAG = "VideoBrowserFragment"
-        private var CATALOG_URL = "http://192.168.1.110:8080/videos"
+        private var CATALOG_URL = "http://192.168.1.109:8080/videos"
+
+        fun updateCatalogUrl(newUrl: String) {
+            CATALOG_URL = "http://" + newUrl + ":8080/videos"
+        }
     }
 
     fun refreshData() {
         mLoadingView!!.visibility = View.VISIBLE
-        // Fetch new data from the server using VideoProvider.buildMedia(CATALOG_URL)
         clearData()
-        val newMediaList = VideoProvider.buildMedia("http://192.168.1.109:8080/videos")
-        val newMediaList2 = newData("http://192.168.1.110:8080/videos")
 
-        // Update the data in the adapter
+        val newMediaList = VideoProvider.buildMedia(CATALOG_URL) //
         mAdapter!!.setData(newMediaList)
 
-
-        // Update the visibility of views based on new data
         mLoadingView!!.visibility = View.GONE
         mEmptyView!!.visibility = if (newMediaList.isNullOrEmpty()) View.VISIBLE else View.GONE
         mRecyclerView!!.visibility = if (newMediaList.isNullOrEmpty()) View.GONE else View.VISIBLE
     }
     fun clearData() {
-        mAdapter!!.setData(null) // Set the data in the adapter to null to clear it
+        mAdapter!!.setData(null)
         mLoadingView!!.visibility = View.GONE
         mEmptyView!!.visibility = View.GONE
         mRecyclerView!!.visibility = View.GONE
@@ -136,18 +135,6 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
 
     fun updateCatalogUrl(newUrl: String) {
         CATALOG_URL = "http://" + newUrl + ":8080/videos"
-    }
-
-    fun newData(url: String): JSONObject?{
-        var json: JSONObject? = null
-        try{
-            val connection = URL(url).openConnection() as HttpURLConnection
-            var data = connection.inputStream.bufferedReader().readText()
-            json = JSONObject(data)
-        }catch (e: Exception) {
-            e.printStackTrace()
-        }
-        return json
     }
 
 }

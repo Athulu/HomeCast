@@ -28,9 +28,9 @@
 
     <EditTextPreference
             android:key="custom_catalog_url"
-            android:title="Custom Catalog URL"
-            android:summary="Enter your custom catalog URL"
-            android:dialogTitle="Enter Custom Catalog URL"
+            android:title="Server IP"
+            android:summary="Wprowadź IP servera HomeCast"
+            android:dialogTitle="Wprowadź IP servera HomeCast"
             android:inputType="text"
             android:selectAllOnFocus="true"
             android:singleLine="true" />
