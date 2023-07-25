@@ -15,6 +15,7 @@
  */
 package com.google.sample.cast.refplayer.browser
 
+import android.content.Context
 import com.google.sample.cast.refplayer.browser.VideoListAdapter.ItemClickListener
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
@@ -25,6 +26,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.core.app.ActivityOptionsCompat
 import android.content.Intent
 import android.content.res.Configuration
+import android.preference.PreferenceManager
+import android.util.Log
 import android.view.View
 import com.google.sample.cast.refplayer.mediaplayer.LocalPlayerActivity
 import androidx.core.app.ActivityCompat
@@ -33,6 +36,11 @@ import androidx.fragment.app.Fragment
 import androidx.loader.app.LoaderManager
 import androidx.loader.content.Loader
 import com.google.sample.cast.refplayer.utils.MediaItem
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.google.sample.cast.refplayer.settings.CastPreference
+import org.json.JSONObject
+import java.net.HttpURLConnection
+import java.net.URL
 
 /**
  * A fragment to host a list view of the video catalog.
@@ -44,6 +52,7 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
     private var mLoadingView: View? = null
 
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.video_browser_fragment, container, false)
@@ -51,6 +60,7 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         mRecyclerView = view.findViewById<View>(R.id.list) as RecyclerView
         mEmptyView = view.findViewById(R.id.empty_view)
         mLoadingView = view.findViewById(R.id.progress_indicator)
@@ -60,6 +70,12 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
         mAdapter = VideoListAdapter(this, this.requireContext())
         mRecyclerView!!.adapter = mAdapter
         LoaderManager.getInstance(this).initLoader(0, null, this)
+
+        val swipeRefreshLayout = view.findViewById<SwipeRefreshLayout>(R.id.swipeRefreshLayout)
+        swipeRefreshLayout.setOnRefreshListener {
+            refreshData()
+            swipeRefreshLayout.isRefreshing = false
+        }
     }
 
 
@@ -92,6 +108,33 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
 
     companion object {
         private const val TAG = "VideoBrowserFragment"
-        private const val CATALOG_URL = "http://192.168.1.109:8080/videos"
+        private var CATALOG_URL = "http://192.168.1.109:8080/videos"
+
+        fun updateCatalogUrl(newUrl: String) {
+            CATALOG_URL = "http://" + newUrl + ":8080/videos"
+        }
     }
+
+    fun refreshData() {
+        mLoadingView!!.visibility = View.VISIBLE
+        clearData()
+
+        val newMediaList = VideoProvider.buildMedia(CATALOG_URL) //
+        mAdapter!!.setData(newMediaList)
+
+        mLoadingView!!.visibility = View.GONE
+        mEmptyView!!.visibility = if (newMediaList.isNullOrEmpty()) View.VISIBLE else View.GONE
+        mRecyclerView!!.visibility = if (newMediaList.isNullOrEmpty()) View.GONE else View.VISIBLE
+    }
+    fun clearData() {
+        mAdapter!!.setData(null)
+        mLoadingView!!.visibility = View.GONE
+        mEmptyView!!.visibility = View.GONE
+        mRecyclerView!!.visibility = View.GONE
+    }
+
+    fun updateCatalogUrl(newUrl: String) {
+        CATALOG_URL = "http://" + newUrl + ":8080/videos"
+    }
+
 }

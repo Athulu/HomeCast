@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.google.sample.cast.refplayer.app-mergeDebugResources-26:/values-lt/values-lt.xml",
+            "outputFile": "com.google.sample.cast.refplayer.app-mergeDebugResources-27:/values-lt/values-lt.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Nikodem\\.gradle\\caches\\transforms-3\\8bd310f4c2ddba0ce66ea9468f68c4da\\transformed\\jetified-play-services-base-18.0.1\\res\\values-lt\\values.xml",

@@ -1,57 +1,31 @@
-/*
- * Copyright (C) 2022 Google LLC. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.google.sample.cast.refplayer.browser
 
+import android.os.AsyncTask
 import android.util.Log
 import com.google.sample.cast.refplayer.utils.MediaItem
 import org.json.JSONException
 import org.json.JSONObject
-import java.io.*
+import java.net.HttpURLConnection
 import java.net.URL
 
 
-class VideoProvider {
-    protected fun parseUrl(urlString: String?): JSONObject? {
-        var instream: InputStream? = null
-        return try {
-            val url = URL(urlString)
-            val urlConnection = url.openConnection()
-            instream = urlConnection.getInputStream()
-            val reader = BufferedReader(InputStreamReader(
-                    urlConnection.getInputStream(), "UTF-8"), 1024)
-            val sb = StringBuilder()
-            var line: String?
-            while (reader.readLine().also { line = it } != null) {
-                sb.append(line)
-            }
-
-            val json = sb.toString()
-            JSONObject(json)
-        } catch (e: Exception) {
-            Log.d(TAG, "Failed to parse the json for media list", e)
-            null
-        } finally {
-            if (null != instream) {
-                try {
-                    instream.close()
-                } catch (e: IOException) {
-                    Log.w(TAG, e)
-                }
-            }
+class VideoProvider : AsyncTask<String?, Void?, String>(){
+    override fun doInBackground(vararg params: String?): String {
+        try {
+            var connection = URL(params.get(0)).openConnection() as HttpURLConnection
+            return connection.inputStream.bufferedReader().readText()
+        } catch (e: Exception){
+            Log.d(TAG, "troche lipa z pobraniem jsona", e)
+            e.printStackTrace()
         }
+        return "{}"
+    }
+    override fun onPostExecute(message: String) {
+        Log.d(TAG, "pobrano jsona")
+    }
+    protected fun parseUrl(urlString: String?): JSONObject? {
+        val result = execute(urlString).get()
+        return JSONObject(result)
     }
 
     companion object {
@@ -76,13 +50,11 @@ class VideoProvider {
         @JvmStatic
         @Throws(JSONException::class)
         fun buildMedia(url: String?): List<MediaItem>? {
-            if (null != mediaList) {
-                return mediaList
-            }
             val urlPrefixMap: MutableMap<String, String> = HashMap()
             mediaList = ArrayList()
-            val jsonObj = VideoProvider().parseUrl(url!!)
+            var jsonObj = VideoProvider().parseUrl(url!!)
             print(jsonObj.toString())
+            if(jsonObj.toString().equals("{}")) jsonObj = null
 
             if (null != jsonObj) {
                 urlPrefixMap[TAG_MP4] = jsonObj.getString(TAG_MP4)
