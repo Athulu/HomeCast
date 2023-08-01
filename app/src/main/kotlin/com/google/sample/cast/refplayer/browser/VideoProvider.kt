@@ -5,6 +5,10 @@ import android.util.Log
 import com.google.sample.cast.refplayer.utils.MediaItem
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.BufferedReader
+import java.io.IOException
+import java.io.InputStream
+import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -12,13 +16,27 @@ import java.net.URL
 class VideoProvider : AsyncTask<String?, Void?, String>(){
     override fun doInBackground(vararg params: String?): String {
         try {
-            var connection = URL(params.get(0)).openConnection() as HttpURLConnection
-            return connection.inputStream.bufferedReader().readText()
-        } catch (e: Exception){
-            Log.d(TAG, "troche lipa z pobraniem jsona", e)
-            e.printStackTrace()
+            val url = params[0]
+            if (url == null || url.isEmpty()) {
+                // Brak podanego adresu URL, zwracamy pustą zawartość
+                return "{}"
+            }
+
+            val connection = URL(url).openConnection() as HttpURLConnection
+            connection.connectTimeout = 100 // Ustawienie limitu czasu na połączenie (5 sekund)
+            connection.readTimeout = 100 // Ustawienie limitu czasu na odczyt danych (5 sekund)
+
+            val responseCode = connection.responseCode
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                return connection.inputStream.bufferedReader().use { it.readText() }
+            } else {
+                // Błąd w odpowiedzi HTTP, zwracamy pustą zawartość
+                return "{}"
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Wystąpił błąd podczas pobierania danych.", e)
+            return "{}"
         }
-        return "{}"
     }
     override fun onPostExecute(message: String) {
         Log.d(TAG, "pobrano jsona")
