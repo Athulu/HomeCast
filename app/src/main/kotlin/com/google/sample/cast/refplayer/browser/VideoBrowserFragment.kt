@@ -1,46 +1,24 @@
-/*
- * Copyright (C) 2022 Google LLC. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.google.sample.cast.refplayer.browser
 
-import android.content.Context
-import com.google.sample.cast.refplayer.browser.VideoListAdapter.ItemClickListener
-import androidx.recyclerview.widget.RecyclerView
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import android.os.Bundle
-import com.google.sample.cast.refplayer.R
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.core.app.ActivityOptionsCompat
 import android.content.Intent
-import android.content.res.Configuration
+import android.os.Bundle
 import android.preference.PreferenceManager
-import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
-import com.google.sample.cast.refplayer.mediaplayer.LocalPlayerActivity
+import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
 import androidx.fragment.app.Fragment
 import androidx.loader.app.LoaderManager
 import androidx.loader.content.Loader
-import com.google.sample.cast.refplayer.utils.MediaItem
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.google.sample.cast.refplayer.settings.CastPreference
-import org.json.JSONObject
-import java.net.HttpURLConnection
-import java.net.URL
+import com.google.sample.cast.refplayer.R
+import com.google.sample.cast.refplayer.browser.VideoListAdapter.ItemClickListener
+import com.google.sample.cast.refplayer.mediaplayer.LocalPlayerActivity
+import com.google.sample.cast.refplayer.utils.MediaItem
 
 /**
  * A fragment to host a list view of the video catalog.
@@ -51,10 +29,17 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
     private var mEmptyView: View? = null
     private var mLoadingView: View? = null
 
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+        //
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        val customCatalogUrl = sharedPreferences.getString("custom_catalog_url", "")
+        CATALOG_URL = if (customCatalogUrl.isNullOrEmpty()) {
+            DEFAULT_CATALOG_URL
+        } else {
+            "http://${customCatalogUrl.trim()}:8080/videos"
+        }
+        //
         return inflater.inflate(R.layout.video_browser_fragment, container, false)
     }
 
@@ -108,16 +93,22 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
 
     companion object {
         private const val TAG = "VideoBrowserFragment"
-        private var CATALOG_URL = "http://192.168.1.109:8080/videos"
+        private const val DEFAULT_CATALOG_URL = "http://192.168.1.110:8080/videos"
+        private var CATALOG_URL = DEFAULT_CATALOG_URL;
 
         fun updateCatalogUrl(newUrl: String) {
             CATALOG_URL = "http://" + newUrl + ":8080/videos"
+        }
+
+        fun getCatalogUrl(): String {
+            return CATALOG_URL
         }
     }
 
     fun refreshData() {
         mLoadingView!!.visibility = View.VISIBLE
         clearData()
+        updateUrl()
 
         val newMediaList = VideoProvider.buildMedia(CATALOG_URL) //
         mAdapter!!.setData(newMediaList)
@@ -133,8 +124,14 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
         mRecyclerView!!.visibility = View.GONE
     }
 
-    fun updateCatalogUrl(newUrl: String) {
-        CATALOG_URL = "http://" + newUrl + ":8080/videos"
+    fun updateUrl(){
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        val customCatalogUrl = sharedPreferences.getString("custom_catalog_url", "")
+        CATALOG_URL = if (customCatalogUrl.isNullOrEmpty()) {
+            DEFAULT_CATALOG_URL
+        } else {
+            "http://${customCatalogUrl.trim()}:8080/videos"
+        }
     }
 
 }

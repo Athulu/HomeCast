@@ -1,4 +1,0 @@
-#Tue Jul 25 20:31:13 CEST 2023
-base.0=C\:\\Users\\Nikodem\\IdeaProjects\\HomeCast\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
