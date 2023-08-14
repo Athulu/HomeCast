@@ -67,15 +67,14 @@ class VideoListAdapter(private val mClickListener: ItemClickListener, context: C
         }
 
         fun setImage(imgUrl: String?, context: Context?) {
-            mImageLoader = getInstance(context!!)
-                    ?.imageLoader
-            mImageLoader!![imgUrl, ImageLoader.getImageListener(mImgView, 0, 0)]
-            mImgView.setImageUrl(imgUrl, mImageLoader)
-
+            mImageLoader = getInstance(context!!)?.imageLoader
             Glide.with(context)
                 .load(imgUrl)
-                .diskCacheStrategy(DiskCacheStrategy.ALL) // Ustawienie strategii pamięci podręcznej
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(mImgView)
+            mImgView.setImageUrl(imgUrl, mImageLoader)
+
+
         }
 
         fun setOnClickListener(listener: View.OnClickListener?) {
