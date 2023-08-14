@@ -185,7 +185,7 @@
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
-    <color name="white">#FFFFFF</color>
+    <color name="white">#141414</color>
     <color name="yellow">#EEFF41</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
@@ -2182,19 +2182,20 @@
     <style name="Theme.CastPreferenceTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryDark">@color/black</item>
-        <item name="colorAccent">@color/white</item>
+        <item name="colorAccent">@color/netflix_font_color</item>
         <item name="android:textColorPrimary">@color/primary_text</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
         <item name="android:colorBackground">@color/netflix_background_color</item>
     </style>
-    <style name="Theme.CastVideosDark" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.CastVideosDark" parent="Theme.CastPreferenceTheme">
         <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorPrimary">@color/netflix_background_color</item>
     </style>
     <style name="Theme.CastVideosTheme" parent="Theme.AppCompat.NoActionBar">
         
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryDark">@color/black</item>
-        <item name="colorAccent">@color/white</item>
+        <item name="colorAccent">@color/netflix_font_color</item>
         <item name="android:textColorPrimary">@color/primary_text</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
         <item name="android:colorBackground">@color/netflix_background_color</item>
