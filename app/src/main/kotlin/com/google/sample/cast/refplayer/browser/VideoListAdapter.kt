@@ -26,6 +26,8 @@ import com.google.sample.cast.refplayer.R
 import com.android.volley.toolbox.NetworkImageView
 import android.widget.TextView
 import com.android.volley.toolbox.ImageLoader
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.sample.cast.refplayer.utils.MediaItem
 
 /**
@@ -69,6 +71,11 @@ class VideoListAdapter(private val mClickListener: ItemClickListener, context: C
                     ?.imageLoader
             mImageLoader!![imgUrl, ImageLoader.getImageListener(mImgView, 0, 0)]
             mImgView.setImageUrl(imgUrl, mImageLoader)
+
+            Glide.with(context)
+                .load(imgUrl)
+                .diskCacheStrategy(DiskCacheStrategy.ALL) // Ustawienie strategii pamięci podręcznej
+                .into(mImgView)
         }
 
         fun setOnClickListener(listener: View.OnClickListener?) {
