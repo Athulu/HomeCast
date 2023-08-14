@@ -44,36 +44,36 @@
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\ic_skip_previous_grey600_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xhdpi_ic_closed_caption_grey600_36dp.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xhdpi\\ic_closed_caption_grey600_36dp.png"
-    },
-    {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xhdpi_tab_unselected_focused_castvideo.9.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xhdpi\\tab_unselected_focused_castvideo.9.png"
     },
     {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi-v11_ic_stat_hardware_headphones.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-mdpi-v11\\ic_stat_hardware_headphones.png"
-    },
-    {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_ic_closed_caption_googblue_24dp.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi\\ic_closed_caption_googblue_24dp.png"
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xhdpi_ic_closed_caption_grey600_36dp.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xhdpi\\ic_closed_caption_grey600_36dp.png"
     },
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi-v11_ic_stat_hardware_headphones.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi-v11\\ic_stat_hardware_headphones.png"
     },
     {
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_ic_closed_caption_googblue_24dp.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi\\ic_closed_caption_googblue_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi-v11_ic_stat_hardware_headphones.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-mdpi-v11\\ic_stat_hardware_headphones.png"
+    },
+    {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xhdpi_cab_background_bottom_castvideo.9.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xhdpi\\cab_background_bottom_castvideo.9.png"
     },
     {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-hdpi_ic_av_pause_over_video_large.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\ic_av_pause_over_video_large.png"
-    },
-    {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-hdpi_tab_unselected_pressed_democast.9.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\tab_unselected_pressed_democast.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-hdpi_ic_av_pause_over_video_large.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\ic_av_pause_over_video_large.png"
     },
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_list_focused_castvideo.9.png.flat",
@@ -328,12 +328,12 @@
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxxhdpi\\ic_closed_caption_googblue_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi_btn_cab_done_pressed_castvideo.9.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-mdpi\\btn_cab_done_pressed_castvideo.9.png"
-    },
-    {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-hdpi_btn_cab_done_pressed_democast.9.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\btn_cab_done_pressed_democast.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi_btn_cab_done_pressed_castvideo.9.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-mdpi\\btn_cab_done_pressed_castvideo.9.png"
     },
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-hdpi_ic_skip_previous_white_36dp.png.flat",
@@ -344,12 +344,12 @@
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\ic_expand_list.png"
     },
     {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_btn_cab_done_default_castvideo.9.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi\\btn_cab_done_default_castvideo.9.png"
-    },
-    {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-hdpi_ic_play_arrow_grey600_48dp.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\ic_play_arrow_grey600_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_btn_cab_done_default_castvideo.9.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi\\btn_cab_done_default_castvideo.9.png"
     },
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-hdpi_ic_drag_updown_grey_24dp.png.flat",
@@ -408,12 +408,12 @@
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xhdpi\\ab_solid_castvideo.9.png"
     },
     {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xhdpi_tab_unselected_focused_democast.9.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xhdpi\\tab_unselected_focused_democast.9.png"
-    },
-    {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_progress_secondary_castvideo.9.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi\\progress_secondary_castvideo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xhdpi_tab_unselected_focused_democast.9.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xhdpi\\tab_unselected_focused_democast.9.png"
     },
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi_apptheme_scrubber_control_disabled_holo.png.flat",
@@ -440,12 +440,12 @@
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\ic_av_pause_light.png"
     },
     {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi_btn_cab_done_default_castvideo.9.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-mdpi\\btn_cab_done_default_castvideo.9.png"
-    },
-    {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-hdpi_mr_ic_media_route_disabled_holo_dark.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\mr_ic_media_route_disabled_holo_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi_btn_cab_done_default_castvideo.9.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-mdpi\\btn_cab_done_default_castvideo.9.png"
     },
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xhdpi_spinner_ab_pressed_democast.9.png.flat",
@@ -460,12 +460,12 @@
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-hdpi\\ic_closed_caption_googblue_24dp.png"
     },
     {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi_ic_av_pause_over_video.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-mdpi\\ic_av_pause_over_video.png"
-    },
-    {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xhdpi_ic_remove_circle_white_24dp.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xhdpi\\ic_remove_circle_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi_ic_av_pause_over_video.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-mdpi\\ic_av_pause_over_video.png"
     },
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_tab_selected_pressed_castvideo.9.png.flat",
@@ -496,12 +496,12 @@
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi\\apptheme_scrubber_control_disabled_holo.png"
     },
     {
-        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_ic_closed_caption_white_48dp.png.flat",
-        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi\\ic_closed_caption_white_48dp.png"
-    },
-    {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xhdpi_ic_pause_circle_white_80dp.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xhdpi\\ic_pause_circle_white_80dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_ic_closed_caption_white_48dp.png.flat",
+        "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi\\ic_closed_caption_white_48dp.png"
     },
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-mdpi_apptheme_scrubber_track_holo_light.9.png.flat",
@@ -1406,6 +1406,10 @@
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_ic_skip_previous_white_48dp.png.flat",
         "source": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-main-31:\\drawable-xxhdpi\\ic_skip_previous_white_48dp.png"
+    },
+    {
+        "merged": "com.google.sample.cast.refplayer.app-merged_res-29:/layout_player_activity.xml.flat",
+        "source": "com.google.sample.cast.refplayer.app-main-31:/layout/player_activity.xml"
     },
     {
         "merged": "C:\\Users\\Nikodem\\.gradle\\daemon\\7.3.3\\com.google.sample.cast.refplayer.app-merged_res-29:\\drawable-xxhdpi_ic_add_white_48dp.png.flat",
