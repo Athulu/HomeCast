@@ -15,12 +15,21 @@
   limitations under the License.
   -->
 <resources>
+    <style name="Theme.CastPreferenceTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/netflix_font_color</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="android:colorBackground">@color/netflix_background_color</item>
+    </style>
 
-    <style name="Theme.CastVideosTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    <style name="Theme.CastVideosTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Set AppCompat’s color theming attrs -->
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryDark">@color/black</item>
-        <item name="colorAccent">@color/black</item>
+        <item name="colorAccent">@color/netflix_font_color</item>
         <item name="android:textColorPrimary">@color/primary_text</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
         <item name="android:colorBackground">@color/netflix_background_color</item>
@@ -68,26 +77,28 @@
 
     <!-- Customize Expanded Controller -->
     <style name="CustomCastExpandedController" parent="CastExpandedController">
-        <item name="castButtonColor">#FFFFFF</item>
+        <item name="castButtonColor">#000000</item>
         <item name="castPlayButtonDrawable">@drawable/cast_ic_expanded_controller_play</item>
         <item name="castPauseButtonDrawable">@drawable/cast_ic_expanded_controller_pause</item>
         <item name="castStopButtonDrawable">@drawable/cast_ic_expanded_controller_stop</item>
     </style>
 
-    <style name="Theme.CastVideosDark" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- w rozszerzonym na górze napisy -->
+    <style name="Theme.CastVideosDark" parent="Theme.CastPreferenceTheme">
         <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorPrimary">@color/netflix_background_color</item>
     </style>
 
-    <style name="YellowSeekBar" parent="android:Widget.SeekBar">
-        <item name="android:progressDrawable">@drawable/apptheme_scrubber_progress_horizontal_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/apptheme_scrubber_progress_horizontal_holo_light</item>
-        <item name="android:minHeight">13dip</item>
-        <item name="android:maxHeight">13dip</item>
-        <item name="android:thumb">@drawable/apptheme_scrubber_control_selector_holo_light</item>
-        <item name="android:thumbOffset">16dip</item>
-        <item name="android:paddingLeft">16dip</item>
-        <item name="android:paddingRight">16dip</item>
-    </style>
+<!--    <style name="YellowSeekBar" parent="android:Widget.SeekBar">-->
+<!--        <item name="android:progressDrawable">@drawable/apptheme_scrubber_progress_horizontal_holo_light</item>-->
+<!--        <item name="android:indeterminateDrawable">@drawable/apptheme_scrubber_progress_horizontal_holo_light</item>-->
+<!--        <item name="android:minHeight">13dip</item>-->
+<!--        <item name="android:maxHeight">13dip</item>-->
+<!--        <item name="android:thumb">@drawable/apptheme_scrubber_control_selector_holo_light</item>-->
+<!--        <item name="android:thumbOffset">16dip</item>-->
+<!--        <item name="android:paddingLeft">16dip</item>-->
+<!--        <item name="android:paddingRight">16dip</item>-->
+<!--    </style>-->
 
     <style name="myRecyclerViewStyle">
         <!-- NOTE: clipChildren should be true on API level 10 -->

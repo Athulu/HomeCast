@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Nikodem/.gradle/caches/transforms-3/c38c4730877ad13b55d4cc4088c8082e/transformed/mediarouter-1.3.1/res/drawable/mr_button_dark.xml" value="0.1185" />
         <entry key="..\:/Users/Nikodem/Desktop/codelabs-cast-videos-android/app-done/app/src/main/res/drawable/ab_background_textured_castvideo.xml" value="0.1115" />
         <entry key="..\:/Users/Nikodem/Desktop/codelabs-cast-videos-android/app-done/app/src/main/res/drawable/ab_background_textured_democast.xml" value="0.1115" />
         <entry key="..\:/Users/Nikodem/Desktop/codelabs-cast-videos-android/app-done/app/src/main/res/drawable/actionbar_bg_gradient_light.xml" value="0.1115" />
@@ -44,12 +45,45 @@
         <entry key="..\:/Users/Nikodem/Desktop/codelabs-cast-videos-android/app-done/app/src/main/res/menu/browse.xml" value="0.2" />
         <entry key="..\:/Users/Nikodem/Desktop/codelabs-cast-videos-android/app-done/app/src/main/res/menu/expanded_controller.xml" value="0.2" />
         <entry key="..\:/Users/Nikodem/Desktop/codelabs-cast-videos-android/app-done/app/src/main/res/xml/application_preference.xml" value="0.1" />
-        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/layout/browse_row.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/ab_background_textured_castvideo.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/ab_background_textured_democast.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/actionbar_bg_gradient_light.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/apptheme_scrubber_control_selector_holo_light.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/apptheme_scrubber_progress_horizontal_holo_light.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/btn_cab_done_castvideo.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/btn_cab_done_democast.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/cast_player_bg_gradient_light.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/cast_player_bg_gradient_light_overall.xml" value="0.119" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/cc.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/container_gradient_bottom.xml" value="0.119" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/container_gradient_top.xml" value="0.119" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/expanded_controls_bg_gradient_light.xml" value="0.119" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/ic_media_route_connecting_holo_dark.xml" value="0.1075" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/ic_mini_controller_upcoming_play.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/ic_mini_controller_upcoming_stop.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/list_divider.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/player_bg_gradient_dark.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/player_bg_gradient_light.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/pressed_background_democast.xml" value="0.159" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/progress_horizontal_castvideo.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/progress_horizontal_democast.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/selectable_background_castvideo.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/selectable_background_democast.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/skip_next_button.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/skip_previous_button.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/spinner_background_ab_castvideo.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/spinner_background_ab_democast.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/tab_indicator_ab_castvideo.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/tab_indicator_ab_democast.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/text_selector.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/drawable/vertical_divider.xml" value="0.1295" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/layout/browse_row.xml" value="0.176" />
         <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/layout/fragment_recycler_list_view.xml" value="0.1" />
-        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/layout/player_activity.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/layout/video_browser.xml" value="0.25" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/layout/player_activity.xml" value="0.4" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/layout/video_browser.xml" value="0.176" />
         <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/layout/video_browser_fragment.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/menu/browse.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/menu/expanded_controller.xml" value="0.1640625" />
         <entry key="..\:/Users/Nikodem/IdeaProjects/HomeCast/app/src/main/res/xml/application_preference.xml" value="0.1734375" />
       </map>
     </option>
