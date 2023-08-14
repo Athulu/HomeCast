@@ -110,14 +110,6 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
         private const val TAG = "VideoBrowserFragment"
         private const val DEFAULT_CATALOG_URL = "http://192.168.1.110:8080/videos"
         private var CATALOG_URL = DEFAULT_CATALOG_URL;
-
-        fun updateCatalogUrl(newUrl: String) {
-            CATALOG_URL = "http://" + newUrl + ":8080/videos"
-        }
-
-        fun getCatalogUrl(): String {
-            return CATALOG_URL
-        }
     }
 
     fun refreshData() {

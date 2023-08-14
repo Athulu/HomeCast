@@ -26,6 +26,8 @@ import com.google.sample.cast.refplayer.R
 import com.android.volley.toolbox.NetworkImageView
 import android.widget.TextView
 import com.android.volley.toolbox.ImageLoader
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.sample.cast.refplayer.utils.MediaItem
 
 /**
@@ -65,10 +67,14 @@ class VideoListAdapter(private val mClickListener: ItemClickListener, context: C
         }
 
         fun setImage(imgUrl: String?, context: Context?) {
-            mImageLoader = getInstance(context!!)
-                    ?.imageLoader
-            mImageLoader!![imgUrl, ImageLoader.getImageListener(mImgView, 0, 0)]
+            mImageLoader = getInstance(context!!)?.imageLoader
+            Glide.with(context)
+                .load(imgUrl)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(mImgView)
             mImgView.setImageUrl(imgUrl, mImageLoader)
+
+
         }
 
         fun setOnClickListener(listener: View.OnClickListener?) {
