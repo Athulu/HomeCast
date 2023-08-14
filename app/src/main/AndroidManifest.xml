@@ -48,7 +48,7 @@
         </activity>
         <activity
             android:name="com.google.sample.cast.refplayer.settings.CastPreference"
-            android:theme="@style/Theme.AppCompat"
+            android:theme="@style/Theme.CastPreferenceTheme"
             android:label="@string/action_settings"
             android:exported="true">
             <intent-filter>
