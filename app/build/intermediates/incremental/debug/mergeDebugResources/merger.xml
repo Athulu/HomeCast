@@ -3022,7 +3022,12 @@
     </string-array><string-array name="prefs_termination_policy_values">
         <item>0</item>
         <item>1</item>
-    </string-array></file><file path="C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml" qualifiers=""><color name="netflix_background_color">#141414</color><color name="netflix_font_color">#E5E5E5</color><color name="soft_opaque">#30000000</color><color name="img_soft_opaque">#30FF0000</color><color name="img_full_opaque">#00000000</color><color name="black_opaque">#AA000000</color><color name="black">#000000</color><color name="white">#141414</color><color name="orange_transparent">#AAFADCA7</color><color name="orange">#FADCA7</color><color name="casting_media_control_bg">#2c393d</color><color name="yellow">#EEFF41</color><color name="mr_custom_title">#EEFF41</color><color name="actionbar">#506a7d</color><color name="primary">#03A9F4</color><color name="primary_dark">#0288D1</color><color name="primary_light">#B3E5FC</color><color name="accent">@color/primary</color><color name="primary_text">#E5E5E5</color><color name="secondary_text">#E5E5E5</color><color name="icons">#FFFFFF</color><color name="divider">#B6B6B6</color><color name="ccl_mini_upcoming_background">@color/primary</color><color name="pressed_democast">#CC33B5E5</color><color name="green">#1E9618</color></file><file path="C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="showcase_radius">47dp</dimen><dimen name="list_item_translation_z">2dp</dimen><dimen name="queue_drag_margin_right">12dp</dimen><dimen name="browse_row_popup_menu_margin_right">10dp</dimen></file><file path="C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\integers.xml" qualifiers=""><integer name="column_count">3</integer></file><file path="C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">HomeCast</string><string name="app_id">CC1AD845</string><string name="action_settings">Settings</string><string name="cast_app_name">GoogleCastPlayer</string><string name="media_route_menu_title">Play on…</string><string name="list_of_videos">Select a Video Clip</string><string name="casting_to_device">Casting to %1$s</string><string name="ok">OK</string><string name="no_device">(No Device Selected)</string><string name="error">Error</string><string name="pause">Pause</string><string name="play">Play</string><string name="stop">Stop</string><string name="mute">Mute</string><string name="unmute">Unmute</string><string name="loading">Loading…</string><string name="no_video_found">No video was found</string><string name="about_app">About HomeCast</string><string name="version">HomeCast: %1$s</string><string name="session_reconnection_attempt">Attempting to recover previous
+    </string-array><array name="cast_expanded_controller_control_buttons">
+        <item>@drawable/cast_ic_notification_rewind10</item>
+        <item>@drawable/cast_ic_expanded_controller_rewind30</item>
+        <item>@drawable/cast_ic_expanded_controller_forward30</item>
+        <item>@drawable/cast_ic_expanded_controller_skip_next</item>
+    </array></file><file path="C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml" qualifiers=""><color name="netflix_background_color">#141414</color><color name="netflix_font_color">#E5E5E5</color><color name="soft_opaque">#30000000</color><color name="img_soft_opaque">#30FF0000</color><color name="img_full_opaque">#00000000</color><color name="black_opaque">#AA000000</color><color name="black">#000000</color><color name="white">#141414</color><color name="orange_transparent">#AAFADCA7</color><color name="orange">#FADCA7</color><color name="casting_media_control_bg">#2c393d</color><color name="yellow">#EEFF41</color><color name="mr_custom_title">#EEFF41</color><color name="actionbar">#506a7d</color><color name="primary">#03A9F4</color><color name="primary_dark">#0288D1</color><color name="primary_light">#B3E5FC</color><color name="accent">@color/primary</color><color name="primary_text">#E5E5E5</color><color name="secondary_text">#E5E5E5</color><color name="icons">#FFFFFF</color><color name="divider">#B6B6B6</color><color name="ccl_mini_upcoming_background">@color/primary</color><color name="pressed_democast">#CC33B5E5</color><color name="green">#1E9618</color></file><file path="C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="showcase_radius">47dp</dimen><dimen name="list_item_translation_z">2dp</dimen><dimen name="queue_drag_margin_right">12dp</dimen><dimen name="browse_row_popup_menu_margin_right">10dp</dimen></file><file path="C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\integers.xml" qualifiers=""><integer name="column_count">3</integer></file><file path="C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">HomeCast</string><string name="app_id">CC1AD845</string><string name="action_settings">Settings</string><string name="cast_app_name">GoogleCastPlayer</string><string name="media_route_menu_title">Play on…</string><string name="list_of_videos">Select a Video Clip</string><string name="casting_to_device">Casting to %1$s</string><string name="ok">OK</string><string name="no_device">(No Device Selected)</string><string name="error">Error</string><string name="pause">Pause</string><string name="play">Play</string><string name="stop">Stop</string><string name="mute">Mute</string><string name="unmute">Unmute</string><string name="loading">Loading…</string><string name="no_video_found">No video was found</string><string name="about_app">About HomeCast</string><string name="version">HomeCast: %1$s</string><string name="session_reconnection_attempt">Attempting to recover previous
         session…</string><string name="live">Live</string><string name="failed_to_set_volume">Failed to set the volume</string><string name="failed_to_launch_app">Failed to launch application</string><string name="failed_to_set_mute">Failed to adjust the volume mute</string><string name="failed_to_find_app">The application you are trying to launch is not available on
         your Chromecast device
     </string><string name="failed_app_launch_timeout">The request to launch the application has timed out!
@@ -3038,6 +3043,7 @@
         <item name="android:textColorPrimary">@color/primary_text</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
         <item name="android:colorBackground">@color/netflix_background_color</item>
+
     </style><style name="Theme.CastVideosTheme" parent="Theme.AppCompat.NoActionBar">
         
         <item name="colorPrimary">@color/black</item>
@@ -3046,6 +3052,9 @@
         <item name="android:textColorPrimary">@color/primary_text</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
         <item name="android:colorBackground">@color/netflix_background_color</item>
+        <item name="castExpandedControllerStyle">
+            @style/CustomCastExpandedController
+        </item>
 
 
         
@@ -3070,9 +3079,12 @@
         <item name="castProgressBarColor">@color/orange</item>
     </style><style name="CustomCastExpandedController" parent="CastExpandedController">
         <item name="castButtonColor">#000000</item>
-        <item name="castPlayButtonDrawable">@drawable/cast_ic_expanded_controller_play</item>
-        <item name="castPauseButtonDrawable">@drawable/cast_ic_expanded_controller_pause</item>
-        <item name="castStopButtonDrawable">@drawable/cast_ic_expanded_controller_stop</item>
+        <item name="castControlButtons">
+            @array/cast_expanded_controller_control_buttons
+        </item>
+
+
+
     </style><style name="Theme.CastVideosDark" parent="Theme.CastPreferenceTheme">
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorPrimary">@color/netflix_background_color</item>

@@ -23,6 +23,35 @@ import com.google.android.gms.cast.framework.CastButtonFactory
 class ExpandedControlsActivity : ExpandedControllerActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         super.onCreateOptionsMenu(menu)
+
+        //przewiń do tyłu 10s
+        var customButtonView = getButtonImageViewAt(0)
+        var myCustomUiController = MyCustomUIController(customButtonView)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_notification_rewind10)
+        uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
+        uiMediaController.bindViewToRewind(customButtonView, 10000)
+
+        //przewiń 30s do tyłu
+        customButtonView = getButtonImageViewAt(1)
+        myCustomUiController = MyCustomUIController(customButtonView)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_expanded_controller_rewind30)
+        uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
+        uiMediaController.bindViewToRewind(customButtonView, 30000)
+
+        //przewiń 30s do przodu
+        customButtonView = getButtonImageViewAt(2)
+        myCustomUiController = MyCustomUIController(customButtonView)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_expanded_controller_forward30)
+        uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
+        uiMediaController.bindViewToForward(customButtonView, 30000)
+
+        //przewiń do przodu 10s
+        customButtonView = getButtonImageViewAt(3)
+        myCustomUiController = MyCustomUIController(customButtonView)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_notification_forward10)
+        uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
+        uiMediaController.bindViewToForward(customButtonView, 10000)
+
         menuInflater.inflate(R.menu.expanded_controller, menu)
         CastButtonFactory.setUpMediaRouteButton(this, menu, R.id.media_route_menu_item)
         return true

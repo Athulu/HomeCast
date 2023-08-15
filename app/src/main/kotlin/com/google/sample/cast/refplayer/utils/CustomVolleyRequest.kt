@@ -44,6 +44,7 @@ class CustomVolleyRequest private constructor(context: Context) {
 
     companion object {
         private var customVolleyRequest: CustomVolleyRequest? = null
+
         @JvmStatic
         @Synchronized
         fun getInstance(context: Context): CustomVolleyRequest? {
@@ -58,15 +59,15 @@ class CustomVolleyRequest private constructor(context: Context) {
         this.context = context
         requestQueue = getRequestQueue()
         imageLoader = ImageLoader(requestQueue,
-                object : ImageLoader.ImageCache {
-                    private val cache = LruCache<String, Bitmap>(20)
-                    override fun getBitmap(url: String): Bitmap? {
-                        return cache[url]
-                    }
+            object : ImageLoader.ImageCache {
+                private val cache = LruCache<String, Bitmap>(20)
+                override fun getBitmap(url: String): Bitmap? {
+                    return cache[url]
+                }
 
-                    override fun putBitmap(url: String, bitmap: Bitmap) {
-                        cache.put(url, bitmap)
-                    }
-                })
+                override fun putBitmap(url: String, bitmap: Bitmap) {
+                    cache.put(url, bitmap)
+                }
+            })
     }
 }
