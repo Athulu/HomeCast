@@ -15,23 +15,20 @@
  */
 package com.google.sample.cast.refplayer
 
-import com.google.android.gms.cast.framework.CastButtonFactory
-import com.google.android.gms.cast.framework.CastContext
-import com.google.sample.cast.refplayer.settings.CastPreference
-
 import android.content.Intent
 import android.content.res.Configuration
-import android.os.Build
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.cast.framework.CastButtonFactory
+import com.google.android.gms.cast.framework.CastContext
+import com.google.sample.cast.refplayer.settings.CastPreference
 
 class VideoBrowserActivity : AppCompatActivity() {
-    private val mIsHoneyCombOrAbove = Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB
     private var mToolbar: androidx.appcompat.widget.Toolbar? = null
     private var mCastContext: CastContext? = null
     private var mediaRouteMenuItem: MenuItem? = null
@@ -68,18 +65,17 @@ class VideoBrowserActivity : AppCompatActivity() {
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            toggleToolbarVisibility()
-        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            toggleToolbarVisibility()
-        }
+//        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+        toggleToolbarVisibility()
+//        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+//            toggleToolbarVisibility()
+//        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         super.onCreateOptionsMenu(menu)
         menuInflater.inflate(R.menu.browse, menu)
-        mediaRouteMenuItem = CastButtonFactory.setUpMediaRouteButton(getApplicationContext(), menu,
-                R.id.media_route_menu_item)
+        mediaRouteMenuItem = CastButtonFactory.setUpMediaRouteButton(getApplicationContext(), menu, R.id.media_route_menu_item)
         return true
     }
 
