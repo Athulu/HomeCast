@@ -3023,7 +3023,7 @@
         <item>0</item>
         <item>1</item>
     </string-array><array name="cast_expanded_controller_control_buttons">
-        <item>@drawable/cast_ic_expanded_controller_skip_previous</item>
+        <item>@drawable/cast_ic_notification_rewind10</item>
         <item>@drawable/cast_ic_expanded_controller_rewind30</item>
         <item>@drawable/cast_ic_expanded_controller_forward30</item>
         <item>@drawable/cast_ic_expanded_controller_skip_next</item>

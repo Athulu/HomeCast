@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <array name="cast_expanded_controller_control_buttons">
-        <item>@drawable/cast_ic_expanded_controller_skip_previous</item>
+        <item>@drawable/cast_ic_notification_rewind10</item>
         <item>@drawable/cast_ic_expanded_controller_rewind30</item>
         <item>@drawable/cast_ic_expanded_controller_forward30</item>
         <item>@drawable/cast_ic_expanded_controller_skip_next</item>

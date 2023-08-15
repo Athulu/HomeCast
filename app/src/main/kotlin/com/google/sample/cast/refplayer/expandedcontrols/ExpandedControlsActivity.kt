@@ -24,12 +24,12 @@ class ExpandedControlsActivity : ExpandedControllerActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         super.onCreateOptionsMenu(menu)
 
-        //przewiń do poprzedniego odcinka (niewidoczne)
+        //przewiń do tyłu 10s
         var customButtonView = getButtonImageViewAt(0)
         var myCustomUiController = MyCustomUIController(customButtonView)
-        myCustomUiController.updateButtonImage(R.drawable.cast_ic_expanded_controller_skip_previous)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_notification_rewind10)
         uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
-        uiMediaController.bindViewToSkipPrev(customButtonView, 10) //invisibleStat ?!?!?!
+        uiMediaController.bindViewToRewind(customButtonView, 10000)
 
         //przewiń 30s do tyłu
         customButtonView = getButtonImageViewAt(1)
@@ -45,12 +45,12 @@ class ExpandedControlsActivity : ExpandedControllerActivity() {
         uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
         uiMediaController.bindViewToForward(customButtonView, 30000)
 
-        //przewiń do następnego odcinka (niewidoczne)
+        //przewiń do przodu 10s
         customButtonView = getButtonImageViewAt(3)
         myCustomUiController = MyCustomUIController(customButtonView)
-        myCustomUiController.updateButtonImage(R.drawable.cast_ic_expanded_controller_skip_next)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_notification_forward10)
         uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
-        uiMediaController.bindViewToSkipNext(customButtonView, 10) //invisibleStat ?!?!?!
+        uiMediaController.bindViewToForward(customButtonView, 10000)
 
         menuInflater.inflate(R.menu.expanded_controller, menu)
         CastButtonFactory.setUpMediaRouteButton(this, menu, R.id.media_route_menu_item)
