@@ -23,6 +23,35 @@ import com.google.android.gms.cast.framework.CastButtonFactory
 class ExpandedControlsActivity : ExpandedControllerActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         super.onCreateOptionsMenu(menu)
+
+        //przewiń do poprzedniego odcinka (niewidoczne)
+        var customButtonView = getButtonImageViewAt(0)
+        var myCustomUiController = MyCustomUIController(customButtonView)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_expanded_controller_skip_previous)
+        uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
+        uiMediaController.bindViewToSkipPrev(customButtonView, 10) //invisibleStat ?!?!?!
+
+        //przewiń 30s do tyłu
+        customButtonView = getButtonImageViewAt(1)
+        myCustomUiController = MyCustomUIController(customButtonView)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_expanded_controller_rewind30)
+        uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
+        uiMediaController.bindViewToRewind(customButtonView, 30000)
+
+        //przewiń 30s do przodu
+        customButtonView = getButtonImageViewAt(2)
+        myCustomUiController = MyCustomUIController(customButtonView)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_expanded_controller_forward30)
+        uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
+        uiMediaController.bindViewToForward(customButtonView, 30000)
+
+        //przewiń do następnego odcinka (niewidoczne)
+        customButtonView = getButtonImageViewAt(3)
+        myCustomUiController = MyCustomUIController(customButtonView)
+        myCustomUiController.updateButtonImage(R.drawable.cast_ic_expanded_controller_skip_next)
+        uiMediaController.bindViewToUIController(customButtonView, myCustomUiController)
+        uiMediaController.bindViewToSkipNext(customButtonView, 10) //invisibleStat ?!?!?!
+
         menuInflater.inflate(R.menu.expanded_controller, menu)
         CastButtonFactory.setUpMediaRouteButton(this, menu, R.id.media_route_menu_item)
         return true

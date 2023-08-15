@@ -16,6 +16,21 @@
   -->
 <resources>
 
+    <array name="cast_expanded_controller_control_buttons">
+        <item>@drawable/cast_ic_expanded_controller_skip_previous</item>
+        <item>@drawable/cast_ic_expanded_controller_rewind30</item>
+        <item>@drawable/cast_ic_expanded_controller_forward30</item>
+        <item>@drawable/cast_ic_expanded_controller_skip_next</item>
+    </array>
+
+<!--    <array name="cast_expanded_controller_control_buttons">-->
+<!--        <item>@id/cast_button_type_empty</item>-->
+<!--        <item>@drawable/cast_ic_expanded_controller_rewind30</item>-->
+<!--        <item>@id/cast_button_type_forward_30_seconds</item>-->
+<!--        <item>@id/cast_button_type_empty</item>-->
+<!--    </array>-->
+
+
     <string-array name="prefs_volume_names">
         <item>HDMI Out</item>
         <item>Media Stream</item>

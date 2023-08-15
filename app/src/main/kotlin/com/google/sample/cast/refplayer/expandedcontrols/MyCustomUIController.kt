@@ -15,8 +15,4 @@ class MyCustomUIController(private val mView: View) : UIController() {
             mView.setImageResource(imageResId)
         }
     }
-
-    override fun onSendingRemoteMediaRequest() {
-        super.onSendingRemoteMediaRequest()
-    }
 }
