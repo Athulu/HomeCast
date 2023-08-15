@@ -73,8 +73,6 @@ class VideoListAdapter(private val mClickListener: ItemClickListener, context: C
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(mImgView)
             mImgView.setImageUrl(imgUrl, mImageLoader)
-
-
         }
 
         fun setOnClickListener(listener: View.OnClickListener?) {
