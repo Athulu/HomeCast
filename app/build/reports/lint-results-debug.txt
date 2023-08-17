@@ -1,0 +1,994 @@
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\build.gradle:14: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdkVersion 32
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:26: Warning: Attribute usesCleartextTraffic is only used in API level 23 and higher (current min is 18) [UnusedAttribute]
+        android:usesCleartextTraffic="true">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:75: Warning: Attribute progressTint is only used in API level 21 and higher (current min is 18) [UnusedAttribute]
+                android:progressTint="@color/primary"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:76: Warning: Attribute thumbTint is only used in API level 21 and higher (current min is 18) [UnusedAttribute]
+                android:thumbTint="@color/primary"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:175: Warning: Replace the <fragment> tag with FragmentContainerView. [FragmentTagUsage from fragment-1.3.6]
+    <fragment
+     ~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\video_browser.xml:30: Warning: Replace the <fragment> tag with FragmentContainerView. [FragmentTagUsage from fragment-1.3.6]
+    <fragment
+     ~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\video_browser.xml:39: Warning: Replace the <fragment> tag with FragmentContainerView. [FragmentTagUsage from fragment-1.3.6]
+    <fragment
+     ~~~~~~~~
+
+   Explanation for issues of type "FragmentTagUsage":
+   FragmentContainerView replaces the <fragment> tag as the preferred         
+          way of adding fragments via XML. Unlike the <fragment> tag,
+   FragmentContainerView                 uses a normal FragmentTransaction
+   under the hood to add the initial fragment,                 allowing
+   further FragmentTransaction operations on the FragmentContainerView        
+           and providing a consistent timing for lifecycle events.
+
+   https://developer.android.com/reference/androidx/fragment/app/FragmentContainerView.html
+
+   Vendor: Android Open Source Project (fragment-1.3.6)
+   Identifier: fragment-1.3.6
+   Feedback: https://issuetracker.google.com/issues/new?component=192731
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:30: Warning: Redundant label can be removed [RedundantLabel]
+            android:label="@string/app_name"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:42: Warning: Redundant label can be removed [RedundantLabel]
+            android:label="@string/app_name"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:60: Warning: Redundant label can be removed [RedundantLabel]
+                android:label="@string/app_name"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RedundantLabel":
+   When an activity does not have a label attribute, it will use the one from
+   the application tag. Since the application has already specified the same
+   label, the label on this activity can be omitted.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\build.gradle:33: Warning: A newer version of androidx.appcompat:appcompat than 1.5.0 is available: 1.6.1 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\build.gradle:34: Warning: A newer version of androidx.mediarouter:mediarouter than 1.3.1 is available: 1.4.0 [GradleDependency]
+    implementation 'androidx.mediarouter:mediarouter:1.3.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\build.gradle:35: Warning: A newer version of androidx.recyclerview:recyclerview than 1.2.1 is available: 1.3.1 [GradleDependency]
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\build.gradle:36: Warning: A newer version of com.google.android.gms:play-services-cast-framework than 21.1.0 is available: 21.3.0 [GradleDependency]
+    implementation 'com.google.android.gms:play-services-cast-framework:21.1.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\build.gradle:38: Warning: A newer version of androidx.core:core-ktx than 1.8.0 is available: 1.10.1 [GradleDependency]
+    implementation "androidx.core:core-ktx:1.8.0"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\build.gradle:39: Warning: A newer version of org.jetbrains.kotlin:kotlin-stdlib-jdk8 than 1.7.0 is available: 1.7.10 [GradleDependency]
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\build.gradle:41: Warning: A newer version of com.github.bumptech.glide:glide than 4.12.0 is available: 4.13.1 [GradleDependency]
+    implementation "com.github.bumptech.glide:glide:4.12.0"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:31: Warning: Expecting android:screenOrientation="unspecified" or "fullSensor" for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices [LockedOrientationActivity]
+            android:screenOrientation="portrait"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:63: Warning: Expecting android:screenOrientation="unspecified" or "fullSensor" for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices [LockedOrientationActivity]
+                android:screenOrientation="portrait"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "LockedOrientationActivity":
+   The <activity> element should not be locked to any orientation so that
+   users can take advantage of the multi-window environments and larger
+   screens available on Android. To fix the issue, consider declaring the
+   corresponding activity element with `screenOrientation="unspecified"or
+   "fullSensor"` attribute.
+
+   https://developer.android.com/topic/arc/window-management
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\kotlin\com\google\sample\cast\refplayer\mediaplayer\LocalPlayerActivity.kt:542: Warning: Use ResourcesCompat.getDrawable() [UseCompatLoadingForDrawables from androidx.appcompat]
+                        resources.getDrawable(R.drawable.ic_av_pause_dark))
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\kotlin\com\google\sample\cast\refplayer\mediaplayer\LocalPlayerActivity.kt:555: Warning: Use ResourcesCompat.getDrawable() [UseCompatLoadingForDrawables from androidx.appcompat]
+                        resources.getDrawable(R.drawable.ic_av_play_dark))
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseCompatLoadingForDrawables":
+   Use Compat loading of drawables
+
+   Vendor: Android Open Source Project
+   Identifier: androidx.appcompat
+   Feedback: https://issuetracker.google.com/issues/new?component=460343
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:20: Warning: Did you mean "CC!" instead of "CC1"? [Typos]
+    <string name="app_id">CC1AD845</string>
+                          ^
+
+   Explanation for issues of type "Typos":
+   This check looks through the string definitions, and if it finds any words
+   that look like likely misspellings, they are flagged.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\AndroidManifest.xml:49: Warning: PreferenceActivity subclass com.google.sample.cast.refplayer.settings.CastPreference should not be exported [ExportedPreferenceActivity]
+        <activity
+        ^
+
+   Explanation for issues of type "ExportedPreferenceActivity":
+   Fragment injection gives anyone who can send your PreferenceActivity an
+   intent the ability to load any fragment, with any arguments, in your
+   process.
+
+   http://securityintelligence.com/new-vulnerability-android-framework-fragment-injection
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\kotlin\com\google\sample\cast\refplayer\browser\VideoListAdapter.kt:98: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged()
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\kotlin\com\google\sample\cast\refplayer\mediaplayer\LocalPlayerActivity.kt:576: Warning: Unnecessary; SDK_INT is always >= 18 [ObsoleteSdkInt]
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\kotlin\com\google\sample\cast\refplayer\mediaplayer\LocalPlayerActivity.kt:587: Warning: Unnecessary; SDK_INT is always >= 18 [ObsoleteSdkInt]
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi-v11: Warning: This folder configuration (v11) is unnecessary; minSdkVersion is 18. Merge all the resources in this folder into drawable-hdpi. [ObsoleteSdkInt]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi-v11: Warning: This folder configuration (v11) is unnecessary; minSdkVersion is 18. Merge all the resources in this folder into drawable-mdpi. [ObsoleteSdkInt]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi-v11: Warning: This folder configuration (v11) is unnecessary; minSdkVersion is 18. Merge all the resources in this folder into drawable-xhdpi. [ObsoleteSdkInt]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi-v11: Warning: This folder configuration (v11) is unnecessary; minSdkVersion is 18. Merge all the resources in this folder into drawable-xxhdpi. [ObsoleteSdkInt]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values-v11: Warning: This folder configuration (v11) is unnecessary; minSdkVersion is 18. Merge all the resources in this folder into values. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\kotlin\com\google\sample\cast\refplayer\utils\CustomVolleyRequest.kt:46: Warning: Do not place Android context classes in static fields (static reference to CustomVolleyRequest which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+        private var customVolleyRequest: CustomVolleyRequest? = null
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\ab_background_textured_castvideo.xml:20: Warning: The resource R.drawable.ab_background_textured_castvideo appears to be unused [UnusedResources]
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\ab_background_textured_democast.xml:20: Warning: The resource R.drawable.ab_background_textured_democast appears to be unused [UnusedResources]
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_bottom_solid_castvideo.9.png: Warning: The resource R.drawable.ab_bottom_solid_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_bottom_solid_democast.9.png: Warning: The resource R.drawable.ab_bottom_solid_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_solid_castvideo.9.png: Warning: The resource R.drawable.ab_solid_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_solid_democast.9.png: Warning: The resource R.drawable.ab_solid_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_stacked_solid_castvideo.9.png: Warning: The resource R.drawable.ab_stacked_solid_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_stacked_solid_democast.9.png: Warning: The resource R.drawable.ab_stacked_solid_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_texture_tile_castvideo.png: Warning: The resource R.drawable.ab_texture_tile_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_texture_tile_democast.png: Warning: The resource R.drawable.ab_texture_tile_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_transparent_castvideo.9.png: Warning: The resource R.drawable.ab_transparent_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_transparent_democast.9.png: Warning: The resource R.drawable.ab_transparent_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_transparent_democastoverlay.9.png: Warning: The resource R.drawable.ab_transparent_democastoverlay appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\actionbar_bg_gradient_light.xml:17: Warning: The resource R.drawable.actionbar_bg_gradient_light appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\actionbar_logo.png: Warning: The resource R.drawable.actionbar_logo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\actionbar_logo_castvideos.png: Warning: The resource R.drawable.actionbar_logo_castvideos appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\apptheme_scrubber_control_disabled_holo.png: Warning: The resource R.drawable.apptheme_scrubber_control_disabled_holo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\apptheme_scrubber_control_focused_holo.png: Warning: The resource R.drawable.apptheme_scrubber_control_focused_holo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\apptheme_scrubber_control_normal_holo.png: Warning: The resource R.drawable.apptheme_scrubber_control_normal_holo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\apptheme_scrubber_control_pressed_holo.png: Warning: The resource R.drawable.apptheme_scrubber_control_pressed_holo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\apptheme_scrubber_control_selector_holo_light.xml:18: Warning: The resource R.drawable.apptheme_scrubber_control_selector_holo_light appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\apptheme_scrubber_primary_holo.9.png: Warning: The resource R.drawable.apptheme_scrubber_primary_holo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\apptheme_scrubber_progress_horizontal_holo_light.xml:18: Warning: The resource R.drawable.apptheme_scrubber_progress_horizontal_holo_light appears to be unused [UnusedResources]
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\apptheme_scrubber_secondary_holo.9.png: Warning: The resource R.drawable.apptheme_scrubber_secondary_holo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\apptheme_scrubber_track_holo_light.9.png: Warning: The resource R.drawable.apptheme_scrubber_track_holo_light appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\arrays.xml:34: Warning: The resource R.array.prefs_volume_names appears to be unused [UnusedResources]
+    <string-array name="prefs_volume_names">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\arrays.xml:38: Warning: The resource R.array.prefs_termination_policy_names appears to be unused [UnusedResources]
+    <string-array name="prefs_termination_policy_names">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\arrays.xml:44: Warning: The resource R.array.prefs_volume_values appears to be unused [UnusedResources]
+    <string-array name="prefs_volume_values">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\arrays.xml:48: Warning: The resource R.array.prefs_termination_policy_values appears to be unused [UnusedResources]
+    <string-array name="prefs_termination_policy_values">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\btn_cab_done_castvideo.xml:21: Warning: The resource R.drawable.btn_cab_done_castvideo appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\btn_cab_done_default_castvideo.9.png: Warning: The resource R.drawable.btn_cab_done_default_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\btn_cab_done_default_democast.9.png: Warning: The resource R.drawable.btn_cab_done_default_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\btn_cab_done_democast.xml:21: Warning: The resource R.drawable.btn_cab_done_democast appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\btn_cab_done_focused_castvideo.9.png: Warning: The resource R.drawable.btn_cab_done_focused_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\btn_cab_done_focused_democast.9.png: Warning: The resource R.drawable.btn_cab_done_focused_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\btn_cab_done_pressed_castvideo.9.png: Warning: The resource R.drawable.btn_cab_done_pressed_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\btn_cab_done_pressed_democast.9.png: Warning: The resource R.drawable.btn_cab_done_pressed_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\cab_background_bottom_castvideo.9.png: Warning: The resource R.drawable.cab_background_bottom_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\cab_background_bottom_democast.9.png: Warning: The resource R.drawable.cab_background_bottom_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\cab_background_top_castvideo.9.png: Warning: The resource R.drawable.cab_background_top_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\cab_background_top_democast.9.png: Warning: The resource R.drawable.cab_background_top_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\cast_player_bg_gradient_light.xml:17: Warning: The resource R.drawable.cast_player_bg_gradient_light appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\cast_player_bg_gradient_light_overall.xml:17: Warning: The resource R.drawable.cast_player_bg_gradient_light_overall appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\cc.xml:17: Warning: The resource R.drawable.cc appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:21: Warning: The resource R.color.soft_opaque appears to be unused [UnusedResources]
+    <color name="soft_opaque">#30000000</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:22: Warning: The resource R.color.img_soft_opaque appears to be unused [UnusedResources]
+    <color name="img_soft_opaque">#30FF0000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:23: Warning: The resource R.color.img_full_opaque appears to be unused [UnusedResources]
+    <color name="img_full_opaque">#00000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:24: Warning: The resource R.color.black_opaque appears to be unused [UnusedResources]
+    <color name="black_opaque">#AA000000</color>
+           ~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:27: Warning: The resource R.color.orange_transparent appears to be unused [UnusedResources]
+    <color name="orange_transparent">#AAFADCA7</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:28: Warning: The resource R.color.orange appears to be unused [UnusedResources]
+    <color name="orange">#FADCA7</color>
+           ~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:29: Warning: The resource R.color.casting_media_control_bg appears to be unused [UnusedResources]
+    <color name="casting_media_control_bg">#2c393d</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:30: Warning: The resource R.color.yellow appears to be unused [UnusedResources]
+    <color name="yellow">#EEFF41</color>
+           ~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:31: Warning: The resource R.color.mr_custom_title appears to be unused [UnusedResources]
+    <color name="mr_custom_title">#EEFF41</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:32: Warning: The resource R.color.actionbar appears to be unused [UnusedResources]
+    <color name="actionbar">#506a7d</color>
+           ~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:36: Warning: The resource R.color.primary_dark appears to be unused [UnusedResources]
+    <color name="primary_dark">#0288D1</color>
+           ~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:37: Warning: The resource R.color.primary_light appears to be unused [UnusedResources]
+    <color name="primary_light">#B3E5FC</color>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:38: Warning: The resource R.color.accent appears to be unused [UnusedResources]
+    <color name="accent">@color/primary</color>
+           ~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:41: Warning: The resource R.color.icons appears to be unused [UnusedResources]
+    <color name="icons">#FFFFFF</color>
+           ~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:42: Warning: The resource R.color.divider appears to be unused [UnusedResources]
+    <color name="divider">#B6B6B6</color>
+           ~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:43: Warning: The resource R.color.ccl_mini_upcoming_background appears to be unused [UnusedResources]
+    <color name="ccl_mini_upcoming_background">@color/primary</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:45: Warning: The resource R.color.pressed_democast appears to be unused [UnusedResources]
+    <color name="pressed_democast">#CC33B5E5</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\colors.xml:46: Warning: The resource R.color.green appears to be unused [UnusedResources]
+    <color name="green">#1E9618</color>
+           ~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\container_gradient_bottom.xml:17: Warning: The resource R.drawable.container_gradient_bottom appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\container_gradient_top.xml:17: Warning: The resource R.drawable.container_gradient_top appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values-v21\dimens.xml:19: Warning: The resource R.dimen.button_margin appears to be unused [UnusedResources]
+    <dimen name="button_margin">50dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\dimens.xml:20: Warning: The resource R.dimen.activity_horizontal_margin appears to be unused [UnusedResources]
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\dimens.xml:21: Warning: The resource R.dimen.activity_vertical_margin appears to be unused [UnusedResources]
+    <dimen name="activity_vertical_margin">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\dimens.xml:24: Warning: The resource R.dimen.showcase_radius appears to be unused [UnusedResources]
+    <dimen name="showcase_radius">47dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\dimens.xml:26: Warning: The resource R.dimen.list_item_translation_z appears to be unused [UnusedResources]
+    <dimen name="list_item_translation_z">2dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\dimens.xml:27: Warning: The resource R.dimen.queue_drag_margin_right appears to be unused [UnusedResources]
+    <dimen name="queue_drag_margin_right">12dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\expanded_controls_bg_gradient_light.xml:17: Warning: The resource R.drawable.expanded_controls_bg_gradient_light appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\fragment_recycler_list_view.xml:17: Warning: The resource R.layout.fragment_recycler_list_view appears to be unused [UnusedResources]
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\horizontal_divider.xml:17: Warning: The resource R.drawable.horizontal_divider appears to be unused [UnusedResources]
+<shape
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_add_circle_outline_white.png: Warning: The resource R.drawable.ic_add_circle_outline_white appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_add_white_18dp.png: Warning: The resource R.drawable.ic_add_white_18dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_add_white_24dp.png: Warning: The resource R.drawable.ic_add_white_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_add_white_36dp.png: Warning: The resource R.drawable.ic_add_white_36dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_add_white_48dp.png: Warning: The resource R.drawable.ic_add_white_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_next.png: Warning: The resource R.drawable.ic_av_next appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_pause.png: Warning: The resource R.drawable.ic_av_pause appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_pause_ligh2t.png: Warning: The resource R.drawable.ic_av_pause_ligh2t appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_pause_light.png: Warning: The resource R.drawable.ic_av_pause_light appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_pause_over_video.png: Warning: The resource R.drawable.ic_av_pause_over_video appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_pause_over_video_large.png: Warning: The resource R.drawable.ic_av_pause_over_video_large appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_play.png: Warning: The resource R.drawable.ic_av_play appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_play_light.png: Warning: The resource R.drawable.ic_av_play_light appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_play_over_video.png: Warning: The resource R.drawable.ic_av_play_over_video appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_play_over_video_large.png: Warning: The resource R.drawable.ic_av_play_over_video_large appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_previous.png: Warning: The resource R.drawable.ic_av_previous appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_av_stop.png: Warning: The resource R.drawable.ic_av_stop appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_blue.png: Warning: The resource R.drawable.ic_closed_caption_blue appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_googblue_24dp.png: Warning: The resource R.drawable.ic_closed_caption_googblue_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_googblue_36dp.png: Warning: The resource R.drawable.ic_closed_caption_googblue_36dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_googblue_48dp.png: Warning: The resource R.drawable.ic_closed_caption_googblue_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_grey.png: Warning: The resource R.drawable.ic_closed_caption_grey appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_grey600_24dp.png: Warning: The resource R.drawable.ic_closed_caption_grey600_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_grey600_36dp.png: Warning: The resource R.drawable.ic_closed_caption_grey600_36dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_grey600_48dp.png: Warning: The resource R.drawable.ic_closed_caption_grey600_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_white.png: Warning: The resource R.drawable.ic_closed_caption_white appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_white_24dp.png: Warning: The resource R.drawable.ic_closed_caption_white_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_white_36dp.png: Warning: The resource R.drawable.ic_closed_caption_white_36dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_closed_caption_white_48dp.png: Warning: The resource R.drawable.ic_closed_caption_white_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_device_access_volume_muted.png: Warning: The resource R.drawable.ic_device_access_volume_muted appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_device_access_volume_on.png: Warning: The resource R.drawable.ic_device_access_volume_on appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_drag_updown_grey_24dp.png: Warning: The resource R.drawable.ic_drag_updown_grey_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\ic_drag_updown_white_24dp.png: Warning: The resource R.drawable.ic_drag_updown_white_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_expand_list.png: Warning: The resource R.drawable.ic_expand_list appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\mipmap-hdpi\ic_launcher.png: Warning: The resource R.mipmap.ic_launcher appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\ic_media_route_connecting_holo_dark.xml:19: Warning: The resource R.drawable.ic_media_route_connecting_holo_dark appears to be unused [UnusedResources]
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\ic_mini_controller_upcoming_play.xml:17: Warning: The resource R.drawable.ic_mini_controller_upcoming_play appears to be unused [UnusedResources]
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\ic_mini_controller_upcoming_stop.xml:17: Warning: The resource R.drawable.ic_mini_controller_upcoming_stop appears to be unused [UnusedResources]
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_music_albumart.png: Warning: The resource R.drawable.ic_music_albumart appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_pause_circle_white_80dp.png: Warning: The resource R.drawable.ic_pause_circle_white_80dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_play_arrow_grey600_48dp.png: Warning: The resource R.drawable.ic_play_arrow_grey600_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_play_arrow_white_24dp.png: Warning: The resource R.drawable.ic_play_arrow_white_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_play_circle_outline_white.png: Warning: The resource R.drawable.ic_play_circle_outline_white appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_playlist_white_24dp.png: Warning: The resource R.drawable.ic_playlist_white_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_remove_circle_white_24dp.png: Warning: The resource R.drawable.ic_remove_circle_white_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_next_grey300_48dp.png: Warning: The resource R.drawable.ic_skip_next_grey300_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_next_grey600_48dp.png: Warning: The resource R.drawable.ic_skip_next_grey600_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_next_white_36dp.png: Warning: The resource R.drawable.ic_skip_next_white_36dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_next_white_48dp.png: Warning: The resource R.drawable.ic_skip_next_white_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_next_white_semi_48dp.png: Warning: The resource R.drawable.ic_skip_next_white_semi_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_previous_grey300_48dp.png: Warning: The resource R.drawable.ic_skip_previous_grey300_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_previous_grey600_48dp.png: Warning: The resource R.drawable.ic_skip_previous_grey600_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_previous_white_36dp.png: Warning: The resource R.drawable.ic_skip_previous_white_36dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_previous_white_48dp.png: Warning: The resource R.drawable.ic_skip_previous_white_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_skip_previous_white_semi_48dp.png: Warning: The resource R.drawable.ic_skip_previous_white_semi_48dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_stat_action_notification.png: Warning: The resource R.drawable.ic_stat_action_notification appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi-v11\ic_stat_action_notifications.png: Warning: The resource R.drawable.ic_stat_action_notifications appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_stat_hardware_headphones.png: Warning: The resource R.drawable.ic_stat_hardware_headphones appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_stop_white_24dp.png: Warning: The resource R.drawable.ic_stop_white_24dp appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\integers.xml:19: Warning: The resource R.integer.column_count appears to be unused [UnusedResources]
+    <integer name="column_count">3</integer>
+             ~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\list_divider.xml:17: Warning: The resource R.drawable.list_divider appears to be unused [UnusedResources]
+<shape
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\list_focused_castvideo.9.png: Warning: The resource R.drawable.list_focused_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\list_focused_democast.9.png: Warning: The resource R.drawable.list_focused_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\list_pressed_castvideo.9.png: Warning: The resource R.drawable.list_pressed_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\menu_dropdown_panel_castvideo.9.png: Warning: The resource R.drawable.menu_dropdown_panel_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\menu_dropdown_panel_democast.9.png: Warning: The resource R.drawable.menu_dropdown_panel_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\minibg.9.png: Warning: The resource R.drawable.minibg appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\minibg2.png: Warning: The resource R.drawable.minibg2 appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\mr_ic_media_route_connecting_holo_dark.xml:19: Warning: The resource R.drawable.mr_ic_media_route_connecting_holo_dark appears to be unused [UnusedResources]
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\mr_ic_media_route_disabled_holo_dark.png: Warning: The resource R.drawable.mr_ic_media_route_disabled_holo_dark appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\mr_ic_media_route_off_holo_dark.png: Warning: The resource R.drawable.mr_ic_media_route_off_holo_dark appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\mr_ic_media_route_on_0_holo_dark.png: Warning: The resource R.drawable.mr_ic_media_route_on_0_holo_dark appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\mr_ic_media_route_on_1_holo_dark.png: Warning: The resource R.drawable.mr_ic_media_route_on_1_holo_dark appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\mr_ic_media_route_on_2_holo_dark.png: Warning: The resource R.drawable.mr_ic_media_route_on_2_holo_dark appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\mr_ic_media_route_on_holo_dark.png: Warning: The resource R.drawable.mr_ic_media_route_on_holo_dark appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-nodpi\pattern.png: Warning: The resource R.drawable.pattern appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\player_bg_gradient_light.xml:17: Warning: The resource R.drawable.player_bg_gradient_light appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\pressed_background_democast.xml:21: Warning: The resource R.drawable.pressed_background_democast appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\progress_bg_castvideo.9.png: Warning: The resource R.drawable.progress_bg_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\progress_bg_democast.9.png: Warning: The resource R.drawable.progress_bg_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\progress_horizontal_castvideo.xml:21: Warning: The resource R.drawable.progress_horizontal_castvideo appears to be unused [UnusedResources]
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\progress_horizontal_democast.xml:21: Warning: The resource R.drawable.progress_horizontal_democast appears to be unused [UnusedResources]
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\progress_primary_castvideo.9.png: Warning: The resource R.drawable.progress_primary_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\progress_primary_democast.9.png: Warning: The resource R.drawable.progress_primary_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\progress_secondary_castvideo.9.png: Warning: The resource R.drawable.progress_secondary_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\progress_secondary_democast.9.png: Warning: The resource R.drawable.progress_secondary_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\selectable_background_castvideo.xml:21: Warning: The resource R.drawable.selectable_background_castvideo appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\selectable_background_democast.xml:21: Warning: The resource R.drawable.selectable_background_democast appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\shadow6.9.png: Warning: The resource R.drawable.shadow6 appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\shadow7.9.png: Warning: The resource R.drawable.shadow7 appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\skip_next_button.xml:17: Warning: The resource R.drawable.skip_next_button appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\skip_previous_button.xml:17: Warning: The resource R.drawable.skip_previous_button appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\smiec.png: Warning: The resource R.drawable.smiec appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_default_castvideo.9.png: Warning: The resource R.drawable.spinner_ab_default_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_default_democast.9.png: Warning: The resource R.drawable.spinner_ab_default_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_disabled_castvideo.9.png: Warning: The resource R.drawable.spinner_ab_disabled_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_disabled_democast.9.png: Warning: The resource R.drawable.spinner_ab_disabled_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_focused_castvideo.9.png: Warning: The resource R.drawable.spinner_ab_focused_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_focused_democast.9.png: Warning: The resource R.drawable.spinner_ab_focused_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_pressed_castvideo.9.png: Warning: The resource R.drawable.spinner_ab_pressed_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_pressed_democast.9.png: Warning: The resource R.drawable.spinner_ab_pressed_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\spinner_background_ab_castvideo.xml:21: Warning: The resource R.drawable.spinner_background_ab_castvideo appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\spinner_background_ab_democast.xml:21: Warning: The resource R.drawable.spinner_background_ab_democast appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:22: Warning: The resource R.string.cast_app_name appears to be unused [UnusedResources]
+    <string name="cast_app_name">GoogleCastPlayer</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:24: Warning: The resource R.string.list_of_videos appears to be unused [UnusedResources]
+    <string name="list_of_videos">Select a Video Clip</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:25: Warning: The resource R.string.casting_to_device appears to be unused [UnusedResources]
+    <string name="casting_to_device">Casting to %1$s</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:27: Warning: The resource R.string.no_device appears to be unused [UnusedResources]
+    <string name="no_device">(No Device Selected)</string>
+            ~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:29: Warning: The resource R.string.pause appears to be unused [UnusedResources]
+    <string name="pause">Pause</string>
+            ~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:30: Warning: The resource R.string.play appears to be unused [UnusedResources]
+    <string name="play">Play</string>
+            ~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:31: Warning: The resource R.string.stop appears to be unused [UnusedResources]
+    <string name="stop">Stop</string>
+            ~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:32: Warning: The resource R.string.mute appears to be unused [UnusedResources]
+    <string name="mute">Mute</string>
+            ~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:33: Warning: The resource R.string.unmute appears to be unused [UnusedResources]
+    <string name="unmute">Unmute</string>
+            ~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:34: Warning: The resource R.string.loading appears to be unused [UnusedResources]
+    <string name="loading">Loading&#8230;</string>
+            ~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.session_reconnection_attempt appears to be unused [UnusedResources]
+    <string name="session_reconnection_attempt">Attempting to recover previous
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:40: Warning: The resource R.string.live appears to be unused [UnusedResources]
+    <string name="live">Live</string>
+            ~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:44: Warning: The resource R.string.failed_to_set_volume appears to be unused [UnusedResources]
+    <string name="failed_to_set_volume">Failed to set the volume</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:45: Warning: The resource R.string.failed_to_launch_app appears to be unused [UnusedResources]
+    <string name="failed_to_launch_app">Failed to launch application</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:46: Warning: The resource R.string.failed_to_set_mute appears to be unused [UnusedResources]
+    <string name="failed_to_set_mute">Failed to adjust the volume mute</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:47: Warning: The resource R.string.failed_to_find_app appears to be unused [UnusedResources]
+    <string name="failed_to_find_app">The application you are trying to launch is not available on
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:50: Warning: The resource R.string.failed_app_launch_timeout appears to be unused [UnusedResources]
+    <string name="failed_app_launch_timeout">The request to launch the application has timed out!
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:52: Warning: The resource R.string.failed_to_play appears to be unused [UnusedResources]
+    <string name="failed_to_play">Failed to start the playback of media</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:53: Warning: The resource R.string.failed_to_pause appears to be unused [UnusedResources]
+    <string name="failed_to_pause">Failed to pause the playback of media</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:54: Warning: The resource R.string.failed_to_connect appears to be unused [UnusedResources]
+    <string name="failed_to_connect">Could not connect to the device</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:55: Warning: The resource R.string.failed_to_seek appears to be unused [UnusedResources]
+    <string name="failed_to_seek">Failed to seek to the specified position on the remote device
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:60: Warning: The resource R.string.connection_temp_lost appears to be unused [UnusedResources]
+    <string name="connection_temp_lost">Connection to the cast device is temporarily lost</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:61: Warning: The resource R.string.connection_recovered appears to be unused [UnusedResources]
+    <string name="connection_recovered">Connection to the cast device is recovered</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:62: Warning: The resource R.string.connection_lost_retry appears to be unused [UnusedResources]
+    <string name="connection_lost_retry">Connection to the cast device has been temporarily lost.
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:65: Warning: The resource R.string.connection_lost appears to be unused [UnusedResources]
+    <string name="connection_lost">No connection to the cast device exist</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:66: Warning: The resource R.string.failed_to_perform_action appears to be unused [UnusedResources]
+    <string name="failed_to_perform_action">Sorry, ran into issues performing the task you wanted
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:71: Warning: The resource R.string.prefs_header_application appears to be unused [UnusedResources]
+    <string name="prefs_header_application">Application Behavior</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:72: Warning: The resource R.string.prefs_header_application_summary appears to be unused [UnusedResources]
+    <string name="prefs_header_application_summary">Control how the application behaves on the TV
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:74: Warning: The resource R.string.title_activity_test appears to be unused [UnusedResources]
+    <string name="title_activity_test">TestActivity</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:77: Warning: The resource R.string.tab_videos_title appears to be unused [UnusedResources]
+    <string name="tab_videos_title">Videos</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:78: Warning: The resource R.string.tab_music_title appears to be unused [UnusedResources]
+    <string name="tab_music_title">Songs</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:79: Warning: The resource R.string.tab_photos_title appears to be unused [UnusedResources]
+    <string name="tab_photos_title">Photos</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\strings.xml:82: Warning: The resource R.string.touch_to_cast appears to be unused [UnusedResources]
+    <string name="touch_to_cast">Touch to cast videos to your TV</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values-v21\styles.xml:18: Warning: The resource R.style.commonListItemStyle appears to be unused [UnusedResources]
+    <style name="commonListItemStyle">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\styles_castvideo.xml:54: Warning: The resource R.style.CustomMediaRouterTheme appears to be unused [UnusedResources]
+    <style name="CustomMediaRouterTheme" parent="Theme.MediaRouter">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\styles_castvideo.xml:57: Warning: The resource R.style.CustomMediaRouteButtonStyle appears to be unused [UnusedResources]
+    <style name="CustomMediaRouteButtonStyle" parent="Widget.MediaRouter.Light.MediaRouteButton">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\styles_castvideo.xml:74: Warning: The resource R.style.CustomCastMiniController appears to be unused [UnusedResources]
+    <style name="CustomCastMiniController" parent="CastMiniController">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\values\styles_castvideo.xml:110: Warning: The resource R.style.myRecyclerViewStyle appears to be unused [UnusedResources]
+    <style name="myRecyclerViewStyle">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\tab_indicator_ab_castvideo.xml:21: Warning: The resource R.drawable.tab_indicator_ab_castvideo appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\tab_indicator_ab_democast.xml:21: Warning: The resource R.drawable.tab_indicator_ab_democast appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_selected_castvideo.9.png: Warning: The resource R.drawable.tab_selected_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_selected_democast.9.png: Warning: The resource R.drawable.tab_selected_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_selected_focused_castvideo.9.png: Warning: The resource R.drawable.tab_selected_focused_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_selected_focused_democast.9.png: Warning: The resource R.drawable.tab_selected_focused_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_selected_pressed_castvideo.9.png: Warning: The resource R.drawable.tab_selected_pressed_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_selected_pressed_democast.9.png: Warning: The resource R.drawable.tab_selected_pressed_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_unselected_castvideo.9.png: Warning: The resource R.drawable.tab_unselected_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_unselected_democast.9.png: Warning: The resource R.drawable.tab_unselected_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_unselected_focused_castvideo.9.png: Warning: The resource R.drawable.tab_unselected_focused_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_unselected_focused_democast.9.png: Warning: The resource R.drawable.tab_unselected_focused_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_unselected_pressed_castvideo.9.png: Warning: The resource R.drawable.tab_unselected_pressed_castvideo appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_unselected_pressed_democast.9.png: Warning: The resource R.drawable.tab_unselected_pressed_democast appears to be unused [UnusedResources]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\text_selector.xml:17: Warning: The resource R.drawable.text_selector appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\vertical_divider.xml:17: Warning: The resource R.drawable.vertical_divider appears to be unused [UnusedResources]
+<shape
+^
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests=true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests=true.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\shadow7.9.png: Warning: The following images appear in both -nodpi and in a density folder: shadow7.9.png [IconNoDpi]
+
+   Explanation for issues of type "IconNoDpi":
+   Bitmaps that appear in drawable-nodpi folders will not be scaled by the
+   Android framework. If a drawable resource of the same name appears both in
+   a -nodpi folder as well as a dpi folder such as drawable-hdpi, then the
+   behavior is ambiguous and probably not intentional. Delete one or the
+   other, or use different names for the icons.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_action_alerts_and_states_warning.png: Warning: Action Bar icons should use a single gray color (#333333 for light themes (with 60%/30% opacity for enabled/disabled), and #FFFFFF with opacity 80%/30% for dark themes [IconColors]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi\ic_action_alerts_and_states_warning.png: Warning: Action Bar icons should use a single gray color (#333333 for light themes (with 60%/30% opacity for enabled/disabled), and #FFFFFF with opacity 80%/30% for dark themes [IconColors]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\ic_action_alerts_and_states_warning.png: Warning: Action Bar icons should use a single gray color (#333333 for light themes (with 60%/30% opacity for enabled/disabled), and #FFFFFF with opacity 80%/30% for dark themes [IconColors]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\ic_action_alerts_and_states_warning.png: Warning: Action Bar icons should use a single gray color (#333333 for light themes (with 60%/30% opacity for enabled/disabled), and #FFFFFF with opacity 80%/30% for dark themes [IconColors]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_stat_action_notification.png: Warning: Notification icons must be entirely white [IconColors]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\ic_stat_action_notification.png: Warning: Notification icons must be entirely white [IconColors]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\ic_stat_action_notification.png: Warning: Notification icons must be entirely white [IconColors]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ic_stat_hardware_headphones.png: Warning: Notification icons must be entirely white [IconColors]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\ic_stat_hardware_headphones.png: Warning: Notification icons must be entirely white [IconColors]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\ic_stat_hardware_headphones.png: Warning: Notification icons must be entirely white [IconColors]
+
+   Explanation for issues of type "IconColors":
+   Notification icons and Action Bar icons should only white and shades of
+   gray. See the Android Design Guide for more details. Note that the way Lint
+   decides whether an icon is an action bar icon or a notification icon is
+   based on the filename prefix: ic_menu_ for action bar icons, ic_stat_ for
+   notification icons etc. These correspond to the naming conventions
+   documented in https://material.io/design/iconography/
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+
+   Explanation for issues of type "IconLauncherShape":
+   According to the Android Design Guide
+   (https://material.io/design/iconography/) your launcher icons should "use a
+   distinct silhouette", a "three-dimensional, front view, with a slight
+   perspective as if viewed from above, so that users perceive some depth."
+
+   The unique silhouette implies that your launcher icon should not be a
+   filled square.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_texture_tile_castvideo.png: Warning: The image ab_texture_tile_castvideo.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpiab_texture_tile_castvideo.png: 4x4 dp (6x6 px), drawable-mdpiab_texture_tile_castvideo.png: 6x6 dp (6x6 px), drawable-xhdpiab_texture_tile_castvideo.png: 4x4 dp (8x8 px), drawable-xxhdpiab_texture_tile_castvideo.png: 4x4 dp (12x12 px) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_texture_tile_democast.png: Warning: The image ab_texture_tile_democast.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpiab_texture_tile_democast.png: 4x4 dp (6x6 px), drawable-mdpiab_texture_tile_democast.png: 6x6 dp (6x6 px), drawable-xhdpiab_texture_tile_democast.png: 4x4 dp (8x8 px) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\ic_drag_updown_grey_24dp.png: Warning: Suspicious file name ic_drag_updown_grey_24dp.png: The implied 24 dp size does not match the actual dp size (pixel size 60×60 in a drawable-xxhdpi folder computes to 20×20 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_drag_updown_grey_24dp.png: Warning: Suspicious file name ic_drag_updown_grey_24dp.png: The implied 24 dp size does not match the actual dp size (pixel size 72×72 in a drawable-xxxhdpi folder computes to 18×18 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_drag_updown_grey_24dp.png: Warning: The image ic_drag_updown_grey_24dp.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpiic_drag_updown_grey_24dp.png: 24x24 dp (36x36 px), drawable-xhdpiic_drag_updown_grey_24dp.png: 24x24 dp (48x48 px), drawable-xxhdpiic_drag_updown_grey_24dp.png: 20x20 dp (60x60 px), drawable-xxxhdpiic_drag_updown_grey_24dp.png: 18x18 dp (72x72 px) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\ic_drag_updown_white_24dp.png: Warning: Suspicious file name ic_drag_updown_white_24dp.png: The implied 24 dp size does not match the actual dp size (pixel size 60×60 in a drawable-xxhdpi folder computes to 20×20 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_drag_updown_white_24dp.png: Warning: Suspicious file name ic_drag_updown_white_24dp.png: The implied 24 dp size does not match the actual dp size (pixel size 72×72 in a drawable-xxxhdpi folder computes to 18×18 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_drag_updown_white_24dp.png: Warning: The image ic_drag_updown_white_24dp.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpiic_drag_updown_white_24dp.png: 24x24 dp (48x48 px), drawable-xxhdpiic_drag_updown_white_24dp.png: 20x20 dp (60x60 px), drawable-xxxhdpiic_drag_updown_white_24dp.png: 18x18 dp (72x72 px) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\ic_pause_circle_white_80dp.png: Warning: Suspicious file name ic_pause_circle_white_80dp.png: The implied 80 dp size does not match the actual dp size (pixel size 200×200 in a drawable-xxhdpi folder computes to 67×67 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_pause_circle_white_80dp.png: Warning: Suspicious file name ic_pause_circle_white_80dp.png: The implied 80 dp size does not match the actual dp size (pixel size 240×240 in a drawable-xxxhdpi folder computes to 60×60 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_pause_circle_white_80dp.png: Warning: The image ic_pause_circle_white_80dp.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpiic_pause_circle_white_80dp.png: 80x80 dp (120x120 px), drawable-xhdpiic_pause_circle_white_80dp.png: 80x80 dp (160x160 px), drawable-xxhdpiic_pause_circle_white_80dp.png: 67x67 dp (200x200 px), drawable-xxxhdpiic_pause_circle_white_80dp.png: 60x60 dp (240x240 px) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\ic_play_circle_white_80dp.png: Warning: Suspicious file name ic_play_circle_white_80dp.png: The implied 80 dp size does not match the actual dp size (pixel size 200×200 in a drawable-xxhdpi folder computes to 67×67 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_play_circle_white_80dp.png: Warning: Suspicious file name ic_play_circle_white_80dp.png: The implied 80 dp size does not match the actual dp size (pixel size 240×240 in a drawable-xxxhdpi folder computes to 60×60 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_play_circle_white_80dp.png: Warning: The image ic_play_circle_white_80dp.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpiic_play_circle_white_80dp.png: 80x80 dp (120x120 px), drawable-xhdpiic_play_circle_white_80dp.png: 80x80 dp (160x160 px), drawable-xxhdpiic_play_circle_white_80dp.png: 67x67 dp (200x200 px), drawable-xxxhdpiic_play_circle_white_80dp.png: 60x60 dp (240x240 px) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\ic_remove_circle_white_24dp.png: Warning: Suspicious file name ic_remove_circle_white_24dp.png: The implied 24 dp size does not match the actual dp size (pixel size 60×60 in a drawable-xxhdpi folder computes to 20×20 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_remove_circle_white_24dp.png: Warning: Suspicious file name ic_remove_circle_white_24dp.png: The implied 24 dp size does not match the actual dp size (pixel size 72×72 in a drawable-xxxhdpi folder computes to 18×18 dp) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxxhdpi\ic_remove_circle_white_24dp.png: Warning: The image ic_remove_circle_white_24dp.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpiic_remove_circle_white_24dp.png: 24x24 dp (36x36 px), drawable-xhdpiic_remove_circle_white_24dp.png: 24x24 dp (48x48 px), drawable-xxhdpiic_remove_circle_white_24dp.png: 20x20 dp (60x60 px), drawable-xxxhdpiic_remove_circle_white_24dp.png: 18x18 dp (72x72 px) [IconDipSize]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\minibg2.png: Warning: The image minibg2.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpiminibg2.png: 2x39 dp (3x58 px), drawable-mdpiminibg2.png: 3x39 dp (3x39 px) [IconDipSize]
+
+   Explanation for issues of type "IconDipSize":
+   Checks the all icons which are provided in multiple densities, all compute
+   to roughly the same density-independent pixel (dip) size. This catches
+   errors where images are either placed in the wrong folder, or icons are
+   changed to new sizes but some folders are forgotten.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\minibg.9.png: Warning: The minibg.9.png icon has identical contents in the following configuration folders: drawable-xhdpi, drawable-xxhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\mr_ic_media_route_disabled_holo_dark.png: Warning: The mr_ic_media_route_disabled_holo_dark.png icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\mr_ic_media_route_disabled_holo_dark.png: Warning: The mr_ic_media_route_disabled_holo_dark.png icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\mr_ic_media_route_off_holo_dark.png: Warning: The mr_ic_media_route_off_holo_dark.png icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\mr_ic_media_route_off_holo_dark.png: Warning: The mr_ic_media_route_off_holo_dark.png icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\mr_ic_media_route_on_0_holo_dark.png: Warning: The mr_ic_media_route_on_0_holo_dark.png icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\mr_ic_media_route_on_0_holo_dark.png: Warning: The mr_ic_media_route_on_0_holo_dark.png icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\mr_ic_media_route_on_1_holo_dark.png: Warning: The mr_ic_media_route_on_1_holo_dark.png icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\mr_ic_media_route_on_1_holo_dark.png: Warning: The mr_ic_media_route_on_1_holo_dark.png icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\mr_ic_media_route_on_2_holo_dark.png: Warning: The mr_ic_media_route_on_2_holo_dark.png icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\mr_ic_media_route_on_2_holo_dark.png: Warning: The mr_ic_media_route_on_2_holo_dark.png icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\mr_ic_media_route_on_holo_dark.png: Warning: The mr_ic_media_route_on_holo_dark.png icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi [IconDuplicatesConfig]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi\mr_ic_media_route_on_holo_dark.png: Warning: The mr_ic_media_route_on_holo_dark.png icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi [IconDuplicatesConfig]
+
+   Explanation for issues of type "IconDuplicatesConfig":
+   If an icon is provided under different configuration parameters such as
+   drawable-hdpi or -v11, they should typically be different. This detector
+   catches cases where the same icon is provided in different configuration
+   folder which is usually not intentional.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\shadow7.9.png: Warning: Found bitmap drawable res/drawable/shadow7.9.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi: Warning: Missing the following drawables in drawable-hdpi: default_video.png, ic_av_pause_dark.png, ic_drag_updown_white_24dp.png, minibg.9.png, shadow7.9.png... (1 more) [IconDensities]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi: Warning: Missing the following drawables in drawable-mdpi: default_video.png, ic_add_circle_outline_white.png, ic_add_white_18dp.png, ic_add_white_24dp.png, ic_add_white_36dp.png... (39 more) [IconDensities]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi: Warning: Missing the following drawables in drawable-xhdpi: ic_av_pause_ligh2t.png, minibg2.png, smiec.png [IconDensities]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xxhdpi: Warning: Missing the following drawables in drawable-xxhdpi: ab_bottom_solid_democast.9.png, ab_solid_democast.9.png, ab_stacked_solid_democast.9.png, ab_texture_tile_democast.png, ab_transparent_democast.9.png... (26 more) [IconDensities]
+
+   Explanation for issues of type "IconDensities":
+   Icons will look best if a custom version is provided for each of the major
+   screen density classes (low, medium, high, extra high). This lint check
+   identifies icons which do not have complete coverage across the densities.
+
+   Low density is not really used much anymore, so this check ignores the ldpi
+   density. To force lint to include it, set the environment variable
+   ANDROID_LINT_INCLUDE_LDPI=true. For more information on current density
+   usage, see https://developer.android.com/about/dashboards
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\ab_transparent_democastoverlay.9.png: Warning: The following unrelated icon files have identical contents: ab_transparent_democast.9.png, ab_transparent_democastoverlay.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi\ab_transparent_democastoverlay.9.png: Warning: The following unrelated icon files have identical contents: ab_transparent_democast.9.png, ab_transparent_democastoverlay.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\ab_transparent_democastoverlay.9.png: Warning: The following unrelated icon files have identical contents: ab_transparent_democast.9.png, ab_transparent_democastoverlay.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\btn_cab_done_default_democast.9.png: Warning: The following unrelated icon files have identical contents: btn_cab_done_default_castvideo.9.png, btn_cab_done_default_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi\btn_cab_done_default_democast.9.png: Warning: The following unrelated icon files have identical contents: btn_cab_done_default_castvideo.9.png, btn_cab_done_default_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\btn_cab_done_default_democast.9.png: Warning: The following unrelated icon files have identical contents: btn_cab_done_default_castvideo.9.png, btn_cab_done_default_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi-v11\ic_stat_action_notifications.png: Warning: The following unrelated icon files have identical contents: ic_stat_action_notification.png, ic_stat_action_notifications.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\progress_bg_democast.9.png: Warning: The following unrelated icon files have identical contents: progress_bg_castvideo.9.png, progress_bg_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi\progress_bg_democast.9.png: Warning: The following unrelated icon files have identical contents: progress_bg_castvideo.9.png, progress_bg_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\progress_bg_democast.9.png: Warning: The following unrelated icon files have identical contents: progress_bg_castvideo.9.png, progress_bg_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable\shadow7.9.png: Warning: The following unrelated icon files have identical contents: shadow6.9.png, shadow7.9.png, shadow7.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_default_democast.9.png: Warning: The following unrelated icon files have identical contents: spinner_ab_default_castvideo.9.png, spinner_ab_default_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi\spinner_ab_default_democast.9.png: Warning: The following unrelated icon files have identical contents: spinner_ab_default_castvideo.9.png, spinner_ab_default_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\spinner_ab_default_democast.9.png: Warning: The following unrelated icon files have identical contents: spinner_ab_default_castvideo.9.png, spinner_ab_default_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\spinner_ab_disabled_democast.9.png: Warning: The following unrelated icon files have identical contents: spinner_ab_disabled_castvideo.9.png, spinner_ab_disabled_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi\spinner_ab_disabled_democast.9.png: Warning: The following unrelated icon files have identical contents: spinner_ab_disabled_castvideo.9.png, spinner_ab_disabled_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\spinner_ab_disabled_democast.9.png: Warning: The following unrelated icon files have identical contents: spinner_ab_disabled_castvideo.9.png, spinner_ab_disabled_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_selected_democast.9.png: Warning: The following unrelated icon files have identical contents: tab_selected_castvideo.9.png, tab_selected_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi\tab_selected_democast.9.png: Warning: The following unrelated icon files have identical contents: tab_selected_castvideo.9.png, tab_selected_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi\tab_selected_democast.9.png: Warning: The following unrelated icon files have identical contents: tab_selected_castvideo.9.png, tab_selected_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\tab_selected_democast.9.png: Warning: The following unrelated icon files have identical contents: tab_selected_castvideo.9.png, tab_selected_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-hdpi\tab_unselected_democast.9.png: Warning: The following unrelated icon files have identical contents: tab_unselected_castvideo.9.png, tab_unselected_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-mdpi\tab_unselected_democast.9.png: Warning: The following unrelated icon files have identical contents: tab_unselected_castvideo.9.png, tab_unselected_democast.9.png [IconDuplicates]
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\drawable-xhdpi\tab_unselected_democast.9.png: Warning: The following unrelated icon files have identical contents: tab_unselected_castvideo.9.png, tab_unselected_democast.9.png [IconDuplicates]
+
+   Explanation for issues of type "IconDuplicates":
+   If an icon is repeated under different names, you can consolidate and just
+   use one of the icons and delete the others to make your application
+   smaller. However, duplicated icons usually are not intentional and can
+   sometimes point to icons that were accidentally overwritten or accidentally
+   not updated.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\menu\browse.xml:24: Warning: Prefer "ifRoom" instead of "always" [AlwaysShowAction]
+            app:showAsAction="always"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AlwaysShowAction":
+   Using showAsAction="always" in menu XML, or MenuItem.SHOW_AS_ACTION_ALWAYS
+   in Java code is usually a deviation from the user interface style guide.Use
+   ifRoom or the corresponding MenuItem.SHOW_AS_ACTION_IF_ROOM instead.
+
+   If always is used sparingly there are usually no problems and behavior is
+   roughly equivalent to ifRoom but with preference over other ifRoom items.
+   Using it more than twice in the same menu is a bad idea.
+
+   This check looks for menu XML files that contain more than two always
+   actions, or some always actions and no ifRoom actions. In Java code, it
+   looks for projects that contain references to
+   MenuItem.SHOW_AS_ACTION_ALWAYS and no references to
+   MenuItem.SHOW_AS_ACTION_IF_ROOM.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\kotlin\com\google\sample\cast\refplayer\mediaplayer\LocalPlayerActivity.kt:489: Warning: Custom view `VideoView` has setOnTouchListener called on it but does not override performClick [ClickableViewAccessibility]
+        mVideoView!!.setOnTouchListener { _, _ ->
+        ^
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\kotlin\com\google\sample\cast\refplayer\mediaplayer\LocalPlayerActivity.kt:489: Warning: onTouch lambda should call View#performClick when a click is detected [ClickableViewAccessibility]
+        mVideoView!!.setOnTouchListener { _, _ ->
+                                        ^
+
+   Explanation for issues of type "ClickableViewAccessibility":
+   If a View that overrides onTouchEvent or uses an OnTouchListener does not
+   also implement performClick and call it when clicks are detected, the View
+   may not handle accessibility actions properly. Logic handling the click
+   actions should ideally be placed in View#performClick as some accessibility
+   services invoke performClick when a click action should occur.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:69: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageButton
+         ~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:47: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageButton
+         ~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:84: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, just suppress the lint
+   warning with a tools:ignore="ContentDescription" attribute.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:99: Warning: Hardcoded string "0:00", should use @string resource [HardcodedText]
+                    android:text="0:00"
+                    ~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:110: Warning: Hardcoded string "0:00", should use @string resource [HardcodedText]
+                    android:text="0:00"
+                    ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:21: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+        android:paddingLeft="16dp"
+        ~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:76: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
+                android:paddingRight="@dimen/browse_row_popup_menu_margin_right"
+                ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlSymmetry":
+   If you specify padding or margin on the left side of a layout, you should
+   probably also specify padding on the right side (and vice versa) for
+   right-to-left layout symmetry.
+
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:21: Warning: Consider replacing android:paddingLeft with android:paddingStart="16dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingLeft="16dp"
+        ~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:33: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentLeft="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:43: Warning: Consider replacing android:layout_toLeftOf with android:layout_toStartOf="@+id/menu" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toLeftOf="@+id/menu"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:44: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="10dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:45: Warning: Consider replacing android:layout_toRightOf with android:layout_toEndOf="@+id/imageView1" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toRightOf="@+id/imageView1"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:73: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentRight="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\browse_row.xml:76: Warning: Consider replacing android:paddingRight with android:paddingEnd="@dimen/browse_row_popup_menu_margin_right" to better support right-to-left layouts [RtlHardcoded]
+                android:paddingRight="@dimen/browse_row_popup_menu_margin_right"
+                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:27: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignParentLeft="true"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:28: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignParentRight="true"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:34: Warning: Consider replacing android:layout_alignLeft with android:layout_alignStart="@+id/videoView1" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignLeft="@+id/videoView1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:35: Warning: Consider replacing android:layout_alignRight with android:layout_alignEnd="@+id/videoView1" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignRight="@+id/videoView1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:62: Warning: Consider replacing android:layout_alignLeft with android:layout_alignStart="@+id/videoView1" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignLeft="@+id/videoView1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:63: Warning: Consider replacing android:layout_alignRight with android:layout_alignEnd="@+id/videoView1" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignRight="@+id/videoView1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:88: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_alignParentLeft="true"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:95: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="5dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:96: Warning: Consider replacing android:layout_toRightOf with android:layout_toEndOf="@+id/imageView2" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/imageView2"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:106: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_alignParentRight="true"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:107: Warning: Consider replacing android:layout_marginRight with android:layout_marginEnd="16dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginRight="16dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:121: Warning: Consider replacing android:layout_toLeftOf with android:layout_toStartOf="@+id/endText" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toLeftOf="@+id/endText"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:122: Warning: Consider replacing android:layout_toRightOf with android:layout_toEndOf="@+id/startText" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/startText"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:131: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignParentLeft="true"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:144: Warning: Consider replacing android:layout_alignLeft with android:layout_alignStart="@+id/textView1" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignLeft="@+id/textView1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:145: Warning: Consider replacing android:layout_alignRight with android:layout_alignEnd="@+id/textView1" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignRight="@+id/textView1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:157: Warning: Consider replacing android:layout_alignLeft with android:layout_alignStart="@+id/textView1" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignLeft="@+id/textView1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Nikodem\IdeaProjects\HomeCast\app\src\main\res\layout\player_activity.xml:158: Warning: Consider replacing android:layout_alignRight with android:layout_alignEnd="@+id/textView1" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignRight="@+id/textView1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+0 errors, 370 warnings

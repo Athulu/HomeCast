@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.google.sample.cast.refplayer.app-mergeReleaseResources-28:/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Nikodem\\IdeaProjects\\HomeCast\\app\\src\\main\\res\\values-sw720dp-land\\integers.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "679",
+                        "endColumns": "44",
+                        "endOffsets": "719"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "114",
+                        "endColumns": "44",
+                        "endOffsets": "154"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Nikodem\\IdeaProjects\\HomeCast\\app\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "from": {
+                        "startLines": "22",
+                        "startColumns": "4",
+                        "startOffsets": "866",
+                        "endColumns": "58",
+                        "endOffsets": "920"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
+                }
+            ]
+        }
+    ]
+}

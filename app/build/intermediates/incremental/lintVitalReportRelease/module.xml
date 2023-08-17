@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="C:\Users\Nikodem\IdeaProjects\HomeCast\app"
+    name=":app"
+    type="APP"
+    maven="Codelab Android Sender:app:"
+    gradle="7.2.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\Nikodem\AppData\Local\Android\sdk\platforms\android-32\android.jar;C:\Users\Nikodem\AppData\Local\Android\sdk\build-tools\30.0.3\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-32"
+    neverShrinking="true">
+  <lintOptions
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

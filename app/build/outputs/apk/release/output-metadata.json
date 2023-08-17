@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.google.sample.cast.refplayer",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 21,
+      "versionName": "0.82",
+      "outputFile": "app-release-unsigned.apk"
+    }
+  ],
+  "elementType": "File"
+}

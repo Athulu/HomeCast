@@ -27,12 +27,22 @@
     </PreferenceCategory>
 
     <EditTextPreference
-            android:key="custom_catalog_url"
+            android:key="server_url"
             android:title="Server IP"
             android:summary="Wprowadź IP servera HomeCast"
             android:dialogTitle="Wprowadź IP servera HomeCast"
             android:inputType="text"
             android:selectAllOnFocus="true"
             android:singleLine="true" />
+
+    <EditTextPreference
+            android:key="server_port"
+            android:title="Port"
+            android:summary="Wprowadź port servera HomeCast"
+            android:dialogTitle="Wprowadź port servera HomeCast"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+
 
 </PreferenceScreen>

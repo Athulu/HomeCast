@@ -48,13 +48,13 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
                               savedInstanceState: Bundle?): View? {
         //
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
-        val customCatalogUrl = sharedPreferences.getString("custom_catalog_url", "")
-        CATALOG_URL = if (customCatalogUrl.isNullOrEmpty()) {
+        val serverUrl = sharedPreferences.getString("server_url", "")
+        val serverPort = sharedPreferences.getString("server_port", "")
+        CATALOG_URL = if (serverUrl.isNullOrEmpty() || serverPort.isNullOrEmpty()) {
             DEFAULT_CATALOG_URL
         } else {
-            "http://${customCatalogUrl.trim()}:8080/videos"
+            "http://${serverUrl.trim()}:${serverPort.trim()}/videos"
         }
-        //
         return inflater.inflate(R.layout.video_browser_fragment, container, false)
     }
 
@@ -133,11 +133,12 @@ class VideoBrowserFragment : Fragment(), ItemClickListener, LoaderManager.Loader
 
     fun updateUrl(){
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
-        val customCatalogUrl = sharedPreferences.getString("custom_catalog_url", "")
-        CATALOG_URL = if (customCatalogUrl.isNullOrEmpty()) {
+        val serverUrl = sharedPreferences.getString("server_url", "")
+        val serverPort = sharedPreferences.getString("server_port", "")
+        CATALOG_URL = if (serverUrl.isNullOrEmpty() || serverPort.isNullOrEmpty()) {
             DEFAULT_CATALOG_URL
         } else {
-            "http://${customCatalogUrl.trim()}:8080/videos"
+            "http://${serverUrl.trim()}:${serverPort.trim()}/videos"
         }
     }
 

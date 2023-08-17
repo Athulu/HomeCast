@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.2.2" type="incidents">
+
+    <incident
+        id="RedundantLabel"
+        severity="warning"
+        message="Redundant label can be removed">
+        <fix-attribute
+            description="Delete label"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="label"/>
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"
+            line="30"
+            column="13"
+            startOffset="1160"
+            endLine="30"
+            endColumn="45"
+            endOffset="1192"/>
+    </incident>
+
+    <incident
+        id="RedundantLabel"
+        severity="warning"
+        message="Redundant label can be removed">
+        <fix-attribute
+            description="Delete label"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="label"/>
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"
+            line="42"
+            column="13"
+            startOffset="1740"
+            endLine="42"
+            endColumn="45"
+            endOffset="1772"/>
+    </incident>
+
+    <incident
+        id="RedundantLabel"
+        severity="warning"
+        message="Redundant label can be removed">
+        <fix-attribute
+            description="Delete label"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="label"/>
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"
+            line="60"
+            column="17"
+            startOffset="2556"
+            endLine="60"
+            endColumn="49"
+            endOffset="2588"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v11`) is unnecessary; `minSdkVersion` is 18. Merge all the resources in this folder into `drawable-hdpi`.">
+        <fix-data file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi-v11" folderName="drawable-hdpi" requiresApi="18"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi-v11"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v11`) is unnecessary; `minSdkVersion` is 18. Merge all the resources in this folder into `drawable-mdpi`.">
+        <fix-data file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi-v11" folderName="drawable-mdpi" requiresApi="18"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi-v11"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v11`) is unnecessary; `minSdkVersion` is 18. Merge all the resources in this folder into `drawable-xhdpi`.">
+        <fix-data file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi-v11" folderName="drawable-xhdpi" requiresApi="18"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi-v11"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v11`) is unnecessary; `minSdkVersion` is 18. Merge all the resources in this folder into `drawable-xxhdpi`.">
+        <fix-data file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi-v11" folderName="drawable-xxhdpi" requiresApi="18"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi-v11"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/browse_row.xml"
+            line="69"
+            column="10"
+            startOffset="2811"
+            endLine="69"
+            endColumn="21"
+            endOffset="2822"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_activity.xml"
+            line="47"
+            column="10"
+            startOffset="1971"
+            endLine="47"
+            endColumn="21"
+            endOffset="1982"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_activity.xml"
+            line="84"
+            column="14"
+            startOffset="3558"
+            endLine="84"
+            endColumn="23"
+            endOffset="3567"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0:00&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_activity.xml"
+            line="99"
+            column="21"
+            startOffset="4279"
+            endLine="99"
+            endColumn="40"
+            endOffset="4298"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0:00&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_activity.xml"
+            line="110"
+            column="21"
+            startOffset="4787"
+            endLine="110"
+            endColumn="40"
+            endOffset="4806"/>
+    </incident>
+
+    <incident
+        id="FragmentTagUsage"
+        severity="warning"
+        message="Replace the &lt;fragment> tag with FragmentContainerView.">
+        <fix-replace
+            description="Replace with androidx.fragment.app.FragmentContainerView"
+            oldString="fragment"
+            replacement="androidx.fragment.app.FragmentContainerView"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_activity.xml"
+            line="175"
+            column="6"
+            startOffset="7532"
+            endLine="175"
+            endColumn="14"
+            endOffset="7540"/>
+    </incident>
+
+    <incident
+        id="FragmentTagUsage"
+        severity="warning"
+        message="Replace the &lt;fragment> tag with FragmentContainerView.">
+        <fix-replace
+            description="Replace with androidx.fragment.app.FragmentContainerView"
+            oldString="fragment"
+            replacement="androidx.fragment.app.FragmentContainerView"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/video_browser.xml"
+            line="30"
+            column="6"
+            startOffset="1278"
+            endLine="30"
+            endColumn="14"
+            endOffset="1286"/>
+    </incident>
+
+    <incident
+        id="FragmentTagUsage"
+        severity="warning"
+        message="Replace the &lt;fragment> tag with FragmentContainerView.">
+        <fix-replace
+            description="Replace with androidx.fragment.app.FragmentContainerView"
+            oldString="fragment"
+            replacement="androidx.fragment.app.FragmentContainerView"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/video_browser.xml"
+            line="39"
+            column="6"
+            startOffset="1663"
+            endLine="39"
+            endColumn="14"
+            endOffset="1671"/>
+    </incident>
+
+    <incident
+        id="AlwaysShowAction"
+        severity="warning"
+        message="Prefer &quot;`ifRoom`&quot; instead of &quot;`always`&quot;">
+        <fix-replace
+            description="Replace with ifRoom"
+            oldPattern="(always)"
+            replacement="ifRoom"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/browse.xml"
+            line="24"
+            column="13"
+            startOffset="1013"
+            endLine="24"
+            endColumn="38"
+            endOffset="1038"/>
+    </incident>
+
+    <incident
+        id="Typos"
+        severity="warning"
+        message="Did you mean &quot;CC!&quot; instead of &quot;CC1&quot;?">
+        <fix-replace
+            description="Replace with &quot;CC!&quot;"
+            oldString="CC1"
+            replacement="CC!">
+            <range
+                file="${:app*debug*sourceProvider*0*resDir*0}/values/strings.xml"
+                startOffset="748"
+                endOffset="756"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="20"
+            column="27"
+            startOffset="748"
+            endLine="20"
+            endColumn="27"
+            endOffset="750"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v11`) is unnecessary; `minSdkVersion` is 18. Merge all the resources in this folder into `values`.">
+        <fix-data file="${:app*debug*sourceProvider*0*resDir*0}/values-v11" folderName="values" requiresApi="18"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/values-v11"/>
+    </incident>
+
+    <incident
+        id="NotifyDataSetChanged"
+        severity="warning"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*1}/com/google/sample/cast/refplayer/browser/VideoListAdapter.kt"
+            line="98"
+            column="9"
+            startOffset="4113"
+            endLine="98"
+            endColumn="31"
+            endOffset="4135"/>
+    </incident>
+
+    <incident
+        id="ClickableViewAccessibility"
+        severity="warning"
+        message="`onTouch` lambda should call `View#performClick` when a click is detected">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*1}/com/google/sample/cast/refplayer/mediaplayer/LocalPlayerActivity.kt"
+            line="489"
+            column="41"
+            startOffset="18615"
+            endLine="495"
+            endColumn="10"
+            endOffset="18792"/>
+    </incident>
+
+    <incident
+        id="ClickableViewAccessibility"
+        severity="warning"
+        message="Custom view ``VideoView`` has `setOnTouchListener` called on it but does not override `performClick`">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*1}/com/google/sample/cast/refplayer/mediaplayer/LocalPlayerActivity.kt"
+            line="489"
+            column="9"
+            startOffset="18583"
+            endLine="495"
+            endColumn="10"
+            endOffset="18792"/>
+    </incident>
+
+    <incident
+        id="UseCompatLoadingForDrawables"
+        severity="warning"
+        message="Use `ResourcesCompat.getDrawable()`">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*1}/com/google/sample/cast/refplayer/mediaplayer/LocalPlayerActivity.kt"
+            line="542"
+            column="25"
+            startOffset="20708"
+            endLine="542"
+            endColumn="75"
+            endOffset="20758"/>
+    </incident>
+
+    <incident
+        id="UseCompatLoadingForDrawables"
+        severity="warning"
+        message="Use `ResourcesCompat.getDrawable()`">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*1}/com/google/sample/cast/refplayer/mediaplayer/LocalPlayerActivity.kt"
+            line="555"
+            column="25"
+            startOffset="21352"
+            endLine="555"
+            endColumn="74"
+            endOffset="21401"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 18">
+        <fix-data conditional="true"/>
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*1}/com/google/sample/cast/refplayer/mediaplayer/LocalPlayerActivity.kt"
+            line="576"
+            column="17"
+            startOffset="22211"
+            endLine="576"
+            endColumn="80"
+            endOffset="22274"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 18">
+        <fix-data conditional="true"/>
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*1}/com/google/sample/cast/refplayer/mediaplayer/LocalPlayerActivity.kt"
+            line="587"
+            column="17"
+            startOffset="22812"
+            endLine="587"
+            endColumn="80"
+            endOffset="22875"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="Do not place Android context classes in static fields (static reference to `CustomVolleyRequest` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*1}/com/google/sample/cast/refplayer/utils/CustomVolleyRequest.kt"
+            line="46"
+            column="9"
+            startOffset="1668"
+            endLine="46"
+            endColumn="69"
+            endOffset="1728"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 33"
+            oldString="32"
+            replacement="33"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="14"
+            column="9"
+            startOffset="182"
+            endLine="14"
+            endColumn="28"
+            endOffset="201"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.5.0 is available: 1.6.1">
+        <fix-replace
+            description="Change to 1.6.1"
+            family="Update versions"
+            oldString="1.5.0"
+            replacement="1.6.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="33"
+            column="20"
+            startOffset="597"
+            endLine="33"
+            endColumn="56"
+            endOffset="633"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.mediarouter:mediarouter than 1.3.1 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.3.1"
+            replacement="1.4.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="34"
+            column="20"
+            startOffset="654"
+            endLine="34"
+            endColumn="60"
+            endOffset="694"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.recyclerview:recyclerview than 1.2.1 is available: 1.3.1">
+        <fix-replace
+            description="Change to 1.3.1"
+            family="Update versions"
+            oldString="1.2.1"
+            replacement="1.3.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="35"
+            column="20"
+            startOffset="715"
+            endLine="35"
+            endColumn="62"
+            endOffset="757"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.gms:play-services-cast-framework than 21.1.0 is available: 21.3.0">
+        <fix-replace
+            description="Change to 21.3.0"
+            family="Update versions"
+            oldString="21.1.0"
+            replacement="21.3.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="36"
+            column="20"
+            startOffset="778"
+            endLine="36"
+            endColumn="80"
+            endOffset="838"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.8.0 is available: 1.10.1">
+        <fix-replace
+            description="Change to 1.10.1"
+            family="Update versions"
+            oldString="1.8.0"
+            replacement="1.10.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="38"
+            column="20"
+            startOffset="913"
+            endLine="38"
+            endColumn="50"
+            endOffset="943"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlin:kotlin-stdlib-jdk8 than 1.7.0 is available: 1.7.10">
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="39"
+            column="20"
+            startOffset="964"
+            endLine="39"
+            endColumn="77"
+            endOffset="1021"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.github.bumptech.glide:glide than 4.12.0 is available: 4.13.1">
+        <fix-replace
+            description="Change to 4.13.1"
+            family="Update versions"
+            oldString="4.12.0"
+            replacement="4.13.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="41"
+            column="20"
+            startOffset="1117"
+            endLine="41"
+            endColumn="60"
+            endOffset="1157"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/shadow7.9.png` in densityless folder">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/shadow7.9.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Action Bar icons should use a single gray color (`#333333` for light themes (with 60%/30% opacity for enabled/disabled), and `#FFFFFF` with opacity 80%/30% for dark themes">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ic_action_alerts_and_states_warning.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Notification icons must be entirely white">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ic_stat_action_notification.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Notification icons must be entirely white">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ic_stat_hardware_headphones.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Action Bar icons should use a single gray color (`#333333` for light themes (with 60%/30% opacity for enabled/disabled), and `#FFFFFF` with opacity 80%/30% for dark themes">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/ic_action_alerts_and_states_warning.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Action Bar icons should use a single gray color (`#333333` for light themes (with 60%/30% opacity for enabled/disabled), and `#FFFFFF` with opacity 80%/30% for dark themes">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ic_action_alerts_and_states_warning.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Notification icons must be entirely white">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ic_stat_action_notification.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Notification icons must be entirely white">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ic_stat_hardware_headphones.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Action Bar icons should use a single gray color (`#333333` for light themes (with 60%/30% opacity for enabled/disabled), and `#FFFFFF` with opacity 80%/30% for dark themes">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_action_alerts_and_states_warning.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Notification icons must be entirely white">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_stat_action_notification.png"/>
+    </incident>
+
+    <incident
+        id="IconColors"
+        severity="warning"
+        message="Notification icons must be entirely white">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_stat_hardware_headphones.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `ab_texture_tile_castvideo.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi\ab_texture_tile_castvideo.png: 4x4 dp (6x6 px), drawable-mdpi\ab_texture_tile_castvideo.png: 6x6 dp (6x6 px), drawable-xhdpi\ab_texture_tile_castvideo.png: 4x4 dp (8x8 px), drawable-xxhdpi\ab_texture_tile_castvideo.png: 4x4 dp (12x12 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ab_texture_tile_castvideo.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ab_texture_tile_castvideo.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ab_texture_tile_castvideo.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/ab_texture_tile_castvideo.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `ab_texture_tile_democast.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi\ab_texture_tile_democast.png: 4x4 dp (6x6 px), drawable-mdpi\ab_texture_tile_democast.png: 6x6 dp (6x6 px), drawable-xhdpi\ab_texture_tile_democast.png: 4x4 dp (8x8 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ab_texture_tile_democast.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ab_texture_tile_democast.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/ab_texture_tile_democast.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_drag_updown_grey_24dp.png`: The implied 24 `dp` size does not match the actual `dp` size (pixel size 72×72 in a `drawable-xxxhdpi` folder computes to 18×18 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_drag_updown_grey_24dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_drag_updown_grey_24dp.png`: The implied 24 `dp` size does not match the actual `dp` size (pixel size 60×60 in a `drawable-xxhdpi` folder computes to 20×20 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_drag_updown_grey_24dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `ic_drag_updown_grey_24dp.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi\ic_drag_updown_grey_24dp.png: 24x24 dp (36x36 px), drawable-xhdpi\ic_drag_updown_grey_24dp.png: 24x24 dp (48x48 px), drawable-xxhdpi\ic_drag_updown_grey_24dp.png: 20x20 dp (60x60 px), drawable-xxxhdpi\ic_drag_updown_grey_24dp.png: 18x18 dp (72x72 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_drag_updown_grey_24dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_drag_updown_grey_24dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ic_drag_updown_grey_24dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ic_drag_updown_grey_24dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_drag_updown_white_24dp.png`: The implied 24 `dp` size does not match the actual `dp` size (pixel size 60×60 in a `drawable-xxhdpi` folder computes to 20×20 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_drag_updown_white_24dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_drag_updown_white_24dp.png`: The implied 24 `dp` size does not match the actual `dp` size (pixel size 72×72 in a `drawable-xxxhdpi` folder computes to 18×18 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_drag_updown_white_24dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `ic_drag_updown_white_24dp.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi\ic_drag_updown_white_24dp.png: 24x24 dp (48x48 px), drawable-xxhdpi\ic_drag_updown_white_24dp.png: 20x20 dp (60x60 px), drawable-xxxhdpi\ic_drag_updown_white_24dp.png: 18x18 dp (72x72 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_drag_updown_white_24dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_drag_updown_white_24dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ic_drag_updown_white_24dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_pause_circle_white_80dp.png`: The implied 80 `dp` size does not match the actual `dp` size (pixel size 240×240 in a `drawable-xxxhdpi` folder computes to 60×60 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_pause_circle_white_80dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_pause_circle_white_80dp.png`: The implied 80 `dp` size does not match the actual `dp` size (pixel size 200×200 in a `drawable-xxhdpi` folder computes to 67×67 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_pause_circle_white_80dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `ic_pause_circle_white_80dp.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi\ic_pause_circle_white_80dp.png: 80x80 dp (120x120 px), drawable-xhdpi\ic_pause_circle_white_80dp.png: 80x80 dp (160x160 px), drawable-xxhdpi\ic_pause_circle_white_80dp.png: 67x67 dp (200x200 px), drawable-xxxhdpi\ic_pause_circle_white_80dp.png: 60x60 dp (240x240 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_pause_circle_white_80dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_pause_circle_white_80dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ic_pause_circle_white_80dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ic_pause_circle_white_80dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_play_circle_white_80dp.png`: The implied 80 `dp` size does not match the actual `dp` size (pixel size 240×240 in a `drawable-xxxhdpi` folder computes to 60×60 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_play_circle_white_80dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_play_circle_white_80dp.png`: The implied 80 `dp` size does not match the actual `dp` size (pixel size 200×200 in a `drawable-xxhdpi` folder computes to 67×67 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_play_circle_white_80dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `ic_play_circle_white_80dp.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi\ic_play_circle_white_80dp.png: 80x80 dp (120x120 px), drawable-xhdpi\ic_play_circle_white_80dp.png: 80x80 dp (160x160 px), drawable-xxhdpi\ic_play_circle_white_80dp.png: 67x67 dp (200x200 px), drawable-xxxhdpi\ic_play_circle_white_80dp.png: 60x60 dp (240x240 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_play_circle_white_80dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_play_circle_white_80dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ic_play_circle_white_80dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ic_play_circle_white_80dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_remove_circle_white_24dp.png`: The implied 24 `dp` size does not match the actual `dp` size (pixel size 72×72 in a `drawable-xxxhdpi` folder computes to 18×18 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_remove_circle_white_24dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="Suspicious file name `ic_remove_circle_white_24dp.png`: The implied 24 `dp` size does not match the actual `dp` size (pixel size 60×60 in a `drawable-xxhdpi` folder computes to 20×20 `dp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_remove_circle_white_24dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `ic_remove_circle_white_24dp.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi\ic_remove_circle_white_24dp.png: 24x24 dp (36x36 px), drawable-xhdpi\ic_remove_circle_white_24dp.png: 24x24 dp (48x48 px), drawable-xxhdpi\ic_remove_circle_white_24dp.png: 20x20 dp (60x60 px), drawable-xxxhdpi\ic_remove_circle_white_24dp.png: 18x18 dp (72x72 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxxhdpi/ic_remove_circle_white_24dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/ic_remove_circle_white_24dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ic_remove_circle_white_24dp.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ic_remove_circle_white_24dp.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `minibg2.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi\minibg2.png: 2x39 dp (3x58 px), drawable-mdpi\minibg2.png: 3x39 dp (3x39 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/minibg2.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/minibg2.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: progress_bg_castvideo.9.png, progress_bg_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/progress_bg_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/progress_bg_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: progress_bg_castvideo.9.png, progress_bg_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/progress_bg_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/progress_bg_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_off_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/mr_ic_media_route_off_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi-v11/mr_ic_media_route_off_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `minibg.9.png` icon has identical contents in the following configuration folders: drawable-xhdpi, drawable-xxhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/minibg.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/minibg.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_on_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/mr_ic_media_route_on_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi-v11/mr_ic_media_route_on_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_disabled_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/mr_ic_media_route_disabled_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi-v11/mr_ic_media_route_disabled_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_on_0_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/mr_ic_media_route_on_0_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi-v11/mr_ic_media_route_on_0_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: ab_transparent_democast.9.png, ab_transparent_democastoverlay.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/ab_transparent_democastoverlay.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/ab_transparent_democast.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_on_1_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/mr_ic_media_route_on_1_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi-v11/mr_ic_media_route_on_1_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: ab_transparent_democast.9.png, ab_transparent_democastoverlay.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ab_transparent_democastoverlay.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/ab_transparent_democast.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: spinner_ab_disabled_castvideo.9.png, spinner_ab_disabled_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/spinner_ab_disabled_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/spinner_ab_disabled_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: spinner_ab_default_castvideo.9.png, spinner_ab_default_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/spinner_ab_default_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/spinner_ab_default_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_on_2_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/mr_ic_media_route_on_2_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi-v11/mr_ic_media_route_on_2_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: ab_transparent_democast.9.png, ab_transparent_democastoverlay.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ab_transparent_democastoverlay.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/ab_transparent_democast.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: spinner_ab_disabled_castvideo.9.png, spinner_ab_disabled_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/spinner_ab_disabled_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/spinner_ab_disabled_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: ic_stat_action_notification.png, ic_stat_action_notifications.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi-v11/ic_stat_action_notifications.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi-v11/ic_stat_action_notification.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_on_1_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/mr_ic_media_route_on_1_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi-v11/mr_ic_media_route_on_1_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_on_2_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/mr_ic_media_route_on_2_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi-v11/mr_ic_media_route_on_2_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: spinner_ab_default_castvideo.9.png, spinner_ab_default_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/spinner_ab_default_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/spinner_ab_default_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: tab_selected_castvideo.9.png, tab_selected_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/tab_selected_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/tab_selected_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: tab_selected_castvideo.9.png, tab_selected_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/tab_selected_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/tab_selected_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: tab_selected_castvideo.9.png, tab_selected_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/tab_selected_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/tab_selected_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: spinner_ab_disabled_castvideo.9.png, spinner_ab_disabled_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/spinner_ab_disabled_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/spinner_ab_disabled_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: tab_unselected_castvideo.9.png, tab_unselected_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/tab_unselected_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/tab_unselected_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: tab_selected_castvideo.9.png, tab_selected_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/tab_selected_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/tab_selected_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: shadow6.9.png, shadow7.9.png, shadow7.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/shadow7.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/shadow7.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/shadow6.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: btn_cab_done_default_castvideo.9.png, btn_cab_done_default_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/btn_cab_done_default_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/btn_cab_done_default_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: tab_unselected_castvideo.9.png, tab_unselected_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/tab_unselected_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/tab_unselected_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_disabled_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/mr_ic_media_route_disabled_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi-v11/mr_ic_media_route_disabled_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: btn_cab_done_default_castvideo.9.png, btn_cab_done_default_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/btn_cab_done_default_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/btn_cab_done_default_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_on_0_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/mr_ic_media_route_on_0_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi-v11/mr_ic_media_route_on_0_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: tab_unselected_castvideo.9.png, tab_unselected_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/tab_unselected_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/tab_unselected_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_off_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xhdpi-v11, drawable-xhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/mr_ic_media_route_off_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi-v11/mr_ic_media_route_off_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: spinner_ab_default_castvideo.9.png, spinner_ab_default_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/spinner_ab_default_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi/spinner_ab_default_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `mr_ic_media_route_on_holo_dark.png` icon has identical contents in the following configuration folders: drawable-xxhdpi-v11, drawable-xxhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi/mr_ic_media_route_on_holo_dark.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi-v11/mr_ic_media_route_on_holo_dark.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: btn_cab_done_default_castvideo.9.png, btn_cab_done_default_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/btn_cab_done_default_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/btn_cab_done_default_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: progress_bg_castvideo.9.png, progress_bg_democast.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/progress_bg_democast.9.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi/progress_bg_castvideo.9.png"/>
+    </incident>
+
+    <incident
+        id="IconNoDpi"
+        severity="warning"
+        message="The following images appear in both `-nodpi` and in a density folder: shadow7.9.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi/shadow7.9.png"/>
+    </incident>
+
+    <incident
+        id="IconDensities"
+        severity="warning"
+        message="Missing the following drawables in `drawable-hdpi`: default_video.png, ic_av_pause_dark.png, ic_drag_updown_white_24dp.png, minibg.9.png, shadow7.9.png... (1 more)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-hdpi"/>
+    </incident>
+
+    <incident
+        id="IconDensities"
+        severity="warning"
+        message="Missing the following drawables in `drawable-mdpi`: default_video.png, ic_add_circle_outline_white.png, ic_add_white_18dp.png, ic_add_white_24dp.png, ic_add_white_36dp.png... (39 more)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-mdpi"/>
+    </incident>
+
+    <incident
+        id="IconDensities"
+        severity="warning"
+        message="Missing the following drawables in `drawable-xhdpi`: ic_av_pause_ligh2t.png, minibg2.png, smiec.png">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xhdpi"/>
+    </incident>
+
+    <incident
+        id="IconDensities"
+        severity="warning"
+        message="Missing the following drawables in `drawable-xxhdpi`: ab_bottom_solid_democast.9.png, ab_solid_democast.9.png, ab_stacked_solid_democast.9.png, ab_texture_tile_democast.png, ab_transparent_democast.9.png... (26 more)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-xxhdpi"/>
+    </incident>
+
+</incidents>

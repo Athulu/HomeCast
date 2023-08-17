@@ -38,11 +38,25 @@ class CastPreference : PreferenceActivity(), SharedPreferences.OnSharedPreferenc
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
         sharedPreferences.registerOnSharedPreferenceChangeListener(this)
 
-        val customCatalogUrlPref = findPreference("custom_catalog_url") as EditTextPreference
-        val customCatalogUrl = sharedPreferences.getString("custom_catalog_url", "")
+        val customCatalogUrlPref = findPreference("server_url") as EditTextPreference
+        val customCatalogUrl = sharedPreferences.getString("server_url", "np. 192.168.1.1")
         customCatalogUrlPref.summary = customCatalogUrl
+
+        val serverPortPref = findPreference("server_port") as EditTextPreference
+        val serverPort = sharedPreferences.getString("server_port", "np. 8080")
+        serverPortPref.summary = serverPort
 
     }
 
-    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {}
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
+        if (key == "server_url") {
+            val customCatalogUrlPref = findPreference(key) as EditTextPreference
+            val newCustomCatalogUrl = sharedPreferences?.getString(key, "")
+            customCatalogUrlPref.summary = newCustomCatalogUrl
+        } else if (key == "server_port") {
+            val serverPortPref = findPreference(key) as EditTextPreference
+            val serverPort = sharedPreferences?.getString(key, "")
+            serverPortPref.summary = serverPort
+        }
+    }
 }
