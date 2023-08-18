@@ -18,7 +18,7 @@ Aplikacja strumieniująca filmy z komputera na telewizor za pomocą aplikacji na
 </div>
 
 ### O aplikaacji
-Włączając filmy z komputera na telewizorze byłem za każdym razem zmuszony do jednej z tych 3 irytujących opcji:
+Włączając filmy z komputera na telewizorze byłem za każdym razem zmuszony do jednej z tych irytujących opcji:
 1. Strumieniować bezpośrednio na telewizor, ale za każdym razem, gdy było trzeba zatrzymać/zmienić film/przewinąć to byłem zmuszony iść do mojego pokoju.
 2. Przenosić laptopa do salonu razem z zasilaniem, aby podłączyć pod HDMI. Dalej byłem zmuszony wstawać z kanapy gdy chciałem zatrzymać lub zmienić film. Mniej chodzenia, ale więcej noszenia.
 
